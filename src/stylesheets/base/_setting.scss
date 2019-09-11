@@ -1,0 +1,90 @@
+// primary color
+$primary-color: #ad1f23;
+$primary-color-light: #e5554c;
+$primary-color-dark:#760000;
+
+/*color body*/
+
+$body-color: #24273e;
+
+/*color heading*/
+
+$color-h: #24273e;
+
+/*link color*/
+
+$link-color:$body-color;
+$link-hover-color: $primary-color;
+$link-hover-decoration: none;
+
+/*btn-link*/
+
+$btn-link-color: #ffffff;
+$btn-link-bg:$primary-color;
+
+/*font size*/
+
+@function rem($pixels, $context: 16) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1rem;
+}
+
+
+/*font-family body*/
+
+$font-family-base: 'Noto Sans',
+sans-serif;
+$font-size-base:rem(15);
+
+/*font-family other*/
+
+$font-awesome: FontAwesome;
+
+/*set screen*/
+
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px) !default;
+$container-max-widths: ( sm: 540px, md: 750px, lg: 980px, xl: 1170px) !default;
+
+/*font heading*/
+
+$h1-font-size: rem(36);
+$h2-font-size: rem(28);
+$h3-font-size: rem(24);
+$h4-font-size: rem(17);
+$h5-font-size: rem(16);
+$h6-font-size: rem(14);
+$headings-line-height:1.55;
+
+/*form custom*/
+
+$input-border-radius: 0;
+$input-btn-padding-y: rem(6);
+$input-btn-padding-x: rem(10);
+
+/*header*/
+
+$header: #000000;
+$header-color: #ffffff;
+$header-sticky: $primary-color;
+$header-hover: #ffffff;
+
+/*menu*/
+
+$menu-main-color: #ffffff;
+$menu-main-bg: transparent;
+$menu-main-color-hover: #ffffff;
+$menu-main-bg-hover: $primary-color;
+$menu-level1-color: #ffffff;
+$menu-level1-background: $menu-main-bg-hover;
+$menu-level1-color-hover: #ffffff;
+$menu-level1-background-hover: lighten($menu-main-bg-hover, 10%);
+
+/*search*/
+
+$search-bg: $primary-color;
+$search-text: #ffffff;

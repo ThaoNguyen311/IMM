@@ -1,0 +1,224 @@
+{% extends 'layouts/application.html' %} {% block bodyClass %}class="home-page"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %}
+<!-- Slideshow -->
+<section class="slideshow">
+    <div id="owl-carousel" class="carousel slide" data-ride="carousel">
+        <!-- No BEM -->
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#owl-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#owl-carousel" data-slide-to="1"></li>
+            <li data-target="#owl-carousel" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-none d-sm-block" src="../images/my/the-xanh-my-eb5.jpg" alt="the-xanh-my-eb5.jpg">
+                <img class="d-sm-none" src="../images/my/the-xanh-my-eb5-mb.jpg" alt="the-xanh-my-eb5-mb.jpg">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#owl-carousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#owl-carousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</section>
+<!-- End slideshow -->
+<!-- Control bar -->
+<section class="control-bar space--30 bg-default">
+    <div class="container">
+        <p class="m-0 py-4">
+            <a href="#eb5" data-id="eb5">EB-5 là gì</a>
+            <span class="px-2 px-md-3">|</span>
+            <a href="#benifit" data-id="benifit">Lợi ích của chương trình EB-5</a>
+            <span class="px-2 px-md-3">|</span>
+            <a href="#condition" data-id="condition">Điều kiện</a>
+            <span class="px-2 px-md-3">|</span>
+            <a href="#process" data-id="process">Quy trình</a>
+        </p>
+    </div>
+</section>
+<!-- End control bar -->
+<section class="text-center space--30" data-aos="fade-up">
+    <div class="container">
+        <h1 class="font-weight-bold pb-4 title-mb">ĐỊNH CƯ MỸ</h1>
+        <iframe class="m-auto" width="1000" height="562" src="https://www.youtube.com/embed/meQnyG0tIQE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+<section class="space--30" id="eb5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6" data-aos="fade-right">
+                <blockquote class="p-3" style="border-left: 5px solid #eee">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i> EB-5 là chương trình đầu tư định cư Mỹ dành cho các nhà đầu tư nước ngoài muốn lấy thẻ xanh cho cả gia đình. Thông qua EB-5, vợ/ chồng cùng các con chưa kết hôn dưới 21 tuổi của nhà
+                    đầu tư sẽ được cấp thẻ xanh và hưởng đầy đủ quyền thường trú nhân của Mỹ. <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </blockquote>
+            </div>
+            <div class="col-12 col-lg-6" data-aos="fade-left">
+                <img src="../images/my/EB-5.jpg" alt="EB-5.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Benifit -->
+<section id="benifit" data-aos="fade-up">
+    <h1 class="main-title text-center text-uppercase">Lợi ích <span style="color:#000000">thẻ xanh EB-5</span></h1>
+    <div class="benifit america space--30 py-5 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="benifit__item col-12 col-md-4 mb-4 text-center ">
+                    <div class="benifit__icon display-4 mb-3 mb-md-5">
+                        <i class="fa fa-book " aria-hidden="true"></i>
+                    </div>
+                    <div class="benifit__detail">
+                        <h4 class="benifit__title text-uppercase font-weight-bold mb-4">Được hưởng đầy đủ quyền lợi như một công dân Mỹ bao gồm nền giáo dục tiên tiến</h4>
+                        <p>Con cái được học miễn phí tại các trường công lập (từ tiểu học đến THPT, mức học phí đại học thấp so với du học sinh) và được ưu tiên nhận vào các trường đại học hàng đầu của Mỹ.</p>
+                    </div>
+                </div>
+                <div class="benifit__item col-12 col-md-4 mb-4 text-center">
+                    <div class="benifit__icon display-4 mb-3 mb-md-5">
+                        <i class="fa fa-shield" aria-hidden="true"></i>
+                    </div>
+                    <div class="benifit__detail">
+                        <h4 class="benifit__title text-uppercase font-weight-bold mb-4">Thẻ xanh cho cả gia đình</h4>
+                        <p>Nhà đầu tư và các thành viên trong gia đình có quyền sinh sống, học tập và làm việc tại bất cứ nơi nào trên nước Mỹ.</p>
+                    </div>
+                </div>
+                <div class="benifit__item col-12 col-md-4 text-center">
+                    <div class="benifit__icon  display-4 mb-3 mb-md-5">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                    </div>
+                    <div class="benifit__detail">
+                        <h4 class="benifit__title text-uppercase font-weight-bold mb-4">Cơ hội nhập quốc tịch mỹ</h4>
+                        <p>Sau 5 năm có thể nộp đơn xin nhập quốc tịch Mỹ, trở thành công dân chính thức và được bảo hộ toàn quyền theo hiến pháp Mỹ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- End benifit -->
+<!-- Condition -->
+<section class="condition condition--US block__img-style space--30" id="condition">
+    <h1 class="main-title text-center text-uppercase">Điều Kiện</h1>
+    <div class="container">
+        <div class="row">
+            <div class="block__item col-12 col-md-4 mb-4" data-aos="zoom-in">
+                <div class="block__wrap">
+                    <img src="./../images/my/web-us-condition-01.jpg" alt="web-us-condition-01.jpg">
+                    <div class="block__panel text-center text-white">
+                        <div class="block__text">
+                            <h4 class="font-weight-bold pb-3 mb-3">Đầu tư 500.000 USD</h4>
+                            <p class="m-0">Đầu tư 500.000 USD vào 1 dự án thoả điều kiện theo chương trình.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block__item col-12 col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="block__wrap">
+                    <img src="./../images/my/web-us-condition-02.jpg" alt="web-us-condition-01.jpg">
+                    <div class="block__panel text-center text-white">
+                        <div class="block__text">
+                            <h4 class="font-weight-bold pb-3 mb-3">Chứng minh nguồn tiền</h4>
+                            <p class="m-0">Chứng minh số tiền đầu tư 500.000 USD có nguồn gốc hợp pháp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block__item col-12 col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="block__wrap">
+                    <img src="./../images/my/web-us-condition-03.jpg" alt="web-us-condition-01.jpg">
+                    <div class="block__panel text-center text-white">
+                        <div class="block__text">
+                            <h4 class="font-weight-bold pb-3 mb-3">Chứng minh đầu tư hiệu quả</h4>
+                            <p class="m-0">Chứng minh việc đầu tư 500.000 USD sẽ tạo ra 10 việc làm toàn thời gian cho người bản xứ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End condition -->
+<!-- Process -->
+<section class="process process--US space--30 py-5" id="process">
+    <h1 class="main-title text-center text-uppercase">Quy trình định cư mỹ</h1>
+    <div class="container">
+        <p class="process__text pb-3 m-0">Quy trình hồ sơ EB5 bao gồm 3 giai đoạn chính:</p>
+        <div class="row align-items-center block-line py-3">
+            <div class="col-sm-3" data-aos="fade-right">
+                <p class="process__title">Hồ sơ I-526</p>
+                <p><small>(Hồ sơ xin thẻ xanh có điều kiện 2 năm)</small></p>
+            </div>
+            <div class="col-sm-2 process__arrow " data-aos="fade-right" data-aos-delay="200"><img src="./../images/my/arrow.png" alt="arrow.png"></div>
+            <div class="col-sm-3" data-aos="fade-right" data-aos-delay="300">
+                <p class="process__title">Hồ sơ I-829</p>
+                <p><small>(Hồ sơ xin xóa điều kiện lấy thẻ xanh vĩnh viễn)</small></p>
+            </div>
+            <div class="col-sm-2 process__arrow" data-aos="fade-right" data-aos-delay="400"><img src="./../images/my/arrow.png" alt="arrow.png"></div>
+            <div class="col-sm-2" data-aos="fade-right" data-aos-delay="600">
+                <p class="process__title"> Hoàn vốn</p>
+            </div>
+        </div>
+        <div class="diagram mt-5">
+            <div class="diagram__step" data-aos="fade-down"><span>1</span>Hồ sơ i-526</div>
+            <ul class="diagram__detail-step list-inline d-flex my-5" data-aos="fade-down" data-aos-delay="400">
+                <li>
+                    <div class="item-step">Chuẩn bị và nộp hồ sơ I-526: <strong>1,5 - 2 tháng</strong></div>
+                </li>
+                <li>
+                    <div class="item-step">Chờ kết quả chấp thuận I-526: <strong>20 - 26 tháng</strong><small>(thay đổi theo Sở Di Trú theo thời gian)</small></div>
+                </li>
+                <li>
+                    <div class="item-step">Chờ phỏng vấn - Nhận Visa định cư: <small>(tùy theo tình hình hạn mức visa tại thời điểm đó)</small></div>
+                </li>
+                <li>
+                    <div class="item-step">Sang Mỹ nhận thẻ xanh có điều kiện</div>
+                </li>
+            </ul>
+            <div class="diagram__step" data-aos="fade-down" data-aos-delay="400"><span>2</span>Hồ sơ i-829</div>
+            <ul class="diagram__detail-step list-inline d-flex my-5" data-aos="fade-down" data-aos-delay="600">
+                <li>
+                    <div class="item-step">Đã sở hữu thẻ xanh có điều kiện được 21 tháng</div>
+                </li>
+                <li>
+                    <div class="item-step">Nộp hồ sơ xin xóa điều kiện I-829</div>
+                </li>
+                <li>
+                    <div class="item-step">Chờ xóa điều kiện thẻ xanh: <strong>24 - 25 tháng</strong><small>(thay đổi theo Sở Di Trú theo từng thời điểm)</small></div>
+                </li>
+            </ul>
+            <div class="diagram__step" data-aos-delay="500" data-aos="flip-down"><span>3</span>Hoàn vốn</div>
+        </div>
+    </div>
+</section>
+<!-- end process -->
+<!-- why choose US -->
+<section class="space--30">
+    <h1 class="main-title text-center text-uppercase space--80">Tại sao chọn mỹ</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="./../images/my/web-us-tai-sao-chon-my.jpg" alt="web-us-tai-sao-chon-my.jpg">
+            </div>
+            <div class="col-sm-8" data-aos="fade-left">
+                <h4 class="font-weight-bold mb-3">Mỹ là một quốc gia đáng định cư vì những điểm nổi trội sau:</h4>
+                <ul>
+                    <li>Nền giáo dục đứng đầu thế giới: Chính phủ Mỹ chú trọng đầu tư chất lượng và cơ sở vật chất cũng như nhiều chính sách cho ngành giáo dục.</li>
+                    <li>Kinh tế: Nước Mỹ là một siêu cường quốc của thế giới.</li>
+                    <li>Môi trường sống tốt: Nguồn nước sạch, không khí trong lành và an toàn vệ sinh thực phẩm gần như tuyệt đối.</li>
+                    <li>Xứ sở của sự tự do phát triển và cơ hội bình đẳng cho tất cả màu da sắc tộc.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end why choose US -->
+<!-- hotline -->
+{% include "modules/component/hotline.html"%}
+<!-- end hotline  -->
+{% endblock %}

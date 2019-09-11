@@ -1,0 +1,46 @@
+$input-color: $white;
+$input-bg: transparent;
+$input-border-color: $input-color;
+.register {
+    .form {
+        &-control {
+            @include display-style($input-color, $input-bg);
+            border: 0;
+            border-bottom: 2px solid $input-border-color;
+            font-size: rem(13);
+            padding: $input-btn-padding-y $input-btn-padding-x;
+            border-radius: $input-border-radius;
+            @include placeholder($input-color);
+            @include hover-focus-active {
+                box-shadow: none;
+                outline: none;
+            }
+            option {
+                color: #000000
+            }
+        }
+        &-check {
+            margin-bottom: rem(10);
+            label {
+                font-weight: $font-weight-base;
+                font-size: rem(13);
+            }
+            &-input {
+                margin-top: rem(7)
+            }
+        }
+        &-submit {
+            button.btn {
+                border-radius: 0;
+                border: 1px solid;
+                border-color: #ccc #ccc #bbb;
+                font-weight: $font-weight-bold;
+                font-size: rem(13);
+                @include display-style($black, $white);
+                &:hover {
+                    @include display-style($white, $primary-color-dark)
+                }
+            }
+        }
+    }
+}

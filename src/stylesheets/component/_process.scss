@@ -1,0 +1,300 @@
+.process {
+    &__title {
+        font-size: rem(25);
+        margin-bottom: 0
+    }
+    &__sub-title {
+        @include media-breakpoint-down(sm) {
+            font-size: 85%
+        }
+    }
+    &__text {
+        font-size: rem(20);
+    }
+    .block-line {
+        border-width: rem(3) 0 rem(3) 0;
+        border-style: solid;
+        border-color: $primary-color;
+    }
+    @include media-breakpoint-down(xs) {
+        .block-line {
+            text-align: center;
+        }
+        &__arrow {
+            transform: rotate(90deg) !important;
+        }
+        &__text {
+            font-size: rem(15);
+        }
+    }
+    &--US {
+        background-color: #f1f1f1;
+    }
+    //australia
+    &--australia .process {
+        &__wrap {
+            background: url('/wp-content/themes/immi/images/uc/australia-process-bg.jpg') 0 0/cover no-repeat;
+            min-height: rem(340);
+            display: flex;
+            align-items: center;
+            background-attachment: fixed;
+        }
+    }
+    &--portugal {
+        background: url('/wp-content/themes/immi/images/portugal/quytrinh-bo-dao-nha.jpg') 0 0/cover no-repeat;
+        padding: 6rem 0;
+        background-attachment: fixed;
+    }
+    &--greek {
+        background-color: #EDEDED
+    }
+    //bulgaria, grenada
+    &__style-01 .process {
+        &__main-title {
+            text-align: center;
+            margin-bottom: rem(-50);
+            padding: rem(20);
+            position: relative;
+            z-index: 1;
+            @include css3-prefix('box-shadow',
+            '7px 16px 29px -12px rgba(0,0,0,.75)');
+            @include display-style($white,
+            $primary-color);
+            &::before {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                content: "";
+                min-height: rem(65);
+                background: url('/wp-content/themes/immi/images/grenada/shadow-bottom.png') center/auto no-repeat;
+                top: rem(-63);
+                @include media-breakpoint-down(sm) {
+                    display: none
+                }
+                @include media-breakpoint-down(md) {
+                    top: rem(-52);
+                    background-size: contain;
+                }
+            }
+        }
+        &__bg {
+            @include display-style($white,
+            $primary-color);
+        }
+        &__item {
+            padding: rem(90) 0 0;
+            &:nth-child(2n) {
+                background: $white;
+                color: $primary-color;
+            }
+            &-child {
+                padding: 0 rem(30)
+            }
+        }
+        @include media-breakpoint-down(lg) {
+            &__item-child {
+                padding: 0 rem(10) 0 0;
+                h3 {
+                    font-size: rem(18)
+                }
+            }
+        }
+        @include media-breakpoint-down(xs) {
+            &__item {
+                padding: rem(30) 0 0;
+                &:first-child {
+                    padding-top: rem(70)
+                }
+            }
+            &__bg {
+                padding-bottom: rem(30) !important;
+            }
+        }
+    }
+    //uc, portugal
+    &__style02 .process__list-proce {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        li {
+            flex: 1;
+            text-align: center;
+            h3 {
+                color: #000;
+                font-size: rem(30);
+                display: inline-block;
+                padding: 0 rem(10) rem(10);
+                border-bottom: 2px solid;
+            }
+            &:nth-child(2n) {
+                .box-step {
+                    background-color: $primary-color;
+                    color: $block-color;
+                    &:after {
+                        border-left-color: $primary-color
+                    }
+                }
+                h3 {
+                    color: $block-color
+                }
+            }
+            &:last-child {
+                .box-step:after {
+                    display: none
+                }
+            }
+        }
+        .box-step {
+            background-color: #d1d2d4;
+            padding: rem(15) rem(30);
+            color: #000;
+            height: 100%;
+            position: relative;
+            p {
+                margin-bottom: 0
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                right: -15px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2;
+                border-style: solid;
+                border-width: 20px 0 20px 15px;
+                border-color: transparent transparent transparent #d1d2d4;
+            }
+            @include media-breakpoint-down(lg) {
+                padding: rem(15);
+                p {
+                    font-size: rem(15)
+                }
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            margin-top: rem(20);
+            li .box-step:after {
+                top: auto;
+                right: calc((100% - 20px)/2);
+                transform: rotate(90deg);
+            }
+        }
+    }
+    &__style-03 {
+        p {
+            margin: 0
+        }
+        .process {
+            &__step {
+                font-size: rem(25);
+                position: relative;
+                border: 1px solid #606060;
+                border-right-color: transparent;
+                padding: 1rem;
+                text-align: center;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -.9rem;
+                    right: rem(-13);
+                    width: 0;
+                    height: 0;
+                    border-top: .8rem solid transparent;
+                    border-bottom: .8rem solid transparent;
+                    border-left: .8rem solid #606060;
+                }
+            }
+            &__content {
+                padding: 1rem 1rem 1rem 0;
+                font-weight: bold;
+                color: $primary-color;
+                border-right: 1px solid #606060;
+                height: 100%;
+            }
+            &__row {
+                overflow: hidden;
+                padding: 1rem 0;
+            }
+        }
+    }
+}
+
+.diagram {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    &:before {
+        content: "";
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 2px;
+        background-color: #bcbcbc;
+        position: absolute;
+        z-index: -1;
+    }
+    &:after {
+        content: "";
+        left: 50%;
+        bottom: 44px;
+        transform: translateX(-50%);
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 10px solid #bcbcbc;
+        z-index: -1;
+    }
+    &__step {
+        display: inline-block;
+        background-color: #bcbcbc;
+        text-transform: uppercase;
+        font-size: rem(25);
+        position: relative;
+        padding: rem(10) rem(20);
+        line-height: 1;
+        min-width: rem(185);
+        span {
+            font-size: rem(65);
+            font-weight: 700;
+            color: #bcbcbc;
+            position: absolute;
+            line-height: 1;
+            left: rem(-45);
+            top: rem(-12)
+        }
+    }
+    &__detail-step {
+        justify-content: center;
+        align-items: stretch;
+        background-color: #f1f1f1;
+        li {
+            color: $block-color;
+            display: flex;
+            align-items: center;
+            padding: rem(15);
+            margin: 0 rem(5);
+            height: rem(180);
+            width: rem(200);
+            font-size: rem(17);
+            line-height: 1.4;
+            text-align: left;
+            background-color: $primary-color;
+            &:nth-child(2n) {
+                background-color: #000000;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            align-items: center;
+            flex-flow: column;
+            background-color: transparent;
+            li {
+                margin: rem(15) 0;
+                text-align: center
+            }
+        }
+    }
+}

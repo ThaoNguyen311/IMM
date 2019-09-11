@@ -1,0 +1,85 @@
+// Adds a browser prefix to the property
+@mixin css3-prefix($property, $value) {
+    -webkit-#{$property}: #{$value};
+    -khtml-#{$property}: #{$value};
+    -moz-#{$property}: #{$value};
+    -ms-#{$property}: #{$value};
+    -o-#{$property}: #{$value};
+    #{$property}: #{$value};
+}
+
+// Transition
+@mixin transition($properties...) {
+    @if length($properties)>=1 {
+        @include css3-prefix('transition', $properties);
+    }
+    @else {
+        @include css3-prefix('transition', "all 0.4s ease-in-out");
+    }
+}
+
+// Transform
+@mixin transform($params) {
+    @include css3-prefix('transform', $params);
+}
+
+// Placeholder
+@mixin placeholder($color) {
+    &:-moz-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+}
+
+// Hex2rgba
+@mixin hex2rgba($color, $opacity: 1) {
+    $result: rgba(red($color), green($color), blue($color), $opacity);
+}
+
+// Background Gradient
+@mixin background-gradient($position:'to right', $startColor: #3C3C3C, $endColor: #999999) {
+    background-image: -webkit-gradient(linear, $position, from($startColor), to($endColor));
+    background-image: -webkit-linear-gradient($position, $startColor, $endColor);
+    background-image: -moz-linear-gradient($position, $startColor, $endColor);
+    background-image: -ms-linear-gradient($position, $startColor, $endColor);
+    background-image: -o-linear-gradient($position, $startColor, $endColor);
+    background-image: linear-gradient($position, $startColor, $endColor);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
+}
+
+@mixin display-style ($color, $background) {
+    color: $color;
+    background: $background
+}
+
+@mixin link-color($color, $hover-color) {
+    color: $color;
+    @include hover-focus-active {
+        color: $hover-color;
+    }
+}
+
+@mixin btn-icon($value: rem(35)) {
+    width: $value;
+    height: $value;
+    line-height: $value;
+    text-align: center;
+    display: inline-block;
+    padding: 0
+}
+
+@mixin input-type {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        @content;
+    }
+}

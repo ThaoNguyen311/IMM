@@ -1,0 +1,105 @@
+*,
+option,
+select,
+input,
+button,
+.bootstrap-select .btn:focus {
+    @include hover-focus-active {
+        outline: 0px !important;
+    }
+}
+
+a {
+    @include link-color($link-color, $link-hover-color);
+    @include transition();
+    @include hover-focus-active {
+        text-decoration: none;
+    }
+}
+
+sub,
+sup {
+    font-size: 62%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    a {
+        font-weight: inherit;
+        color: $color-h;
+        text-decoration: none;
+        font-style: normal;
+        @include hover-focus {
+            color: $link-color;
+            text-decoration: none;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+// #wrapper {
+//     overflow-x: hidden
+// }
+label {
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+}
+
+.text-default {
+    color: $primary-color;
+}
+
+.bg-default {
+    background-color: $primary-color;
+    color: $white;
+    a {
+        color: $white;
+        @include hover-focus-active {
+            color: lighten($primary-color, 25%)
+        }
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden
+}
+
+input,
+select,
+.form-control {
+    @include hover-focus-active {
+        outline: none;
+        box-shadow: none;
+        border-color: #ced4da
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .mb-title {
+        font-size: rem(20);
+        line-height: 1.55
+    }
+}

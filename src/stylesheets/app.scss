@@ -1,0 +1,57 @@
+@import 'base/setting';
+
+/*library*/
+
+@import "lib/aos";
+@import "lib/font-awesome";
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import "./node_modules/bootstrap-select/dist/css/bootstrap-select";
+@import "./node_modules/slick-carousel/slick/slick.scss";
+@import 'lib/slick-theme';
+@import "lib/slicknav";
+
+/*base*/
+
+@import 'base/mixins';
+@import 'base/base';
+@import 'base/button';
+@import 'base/function';
+@import 'base/custom';
+@import 'base/form';
+@import 'base/normalize';
+@import 'base/general';
+@import 'base/animation';
+@import 'base/extend';
+
+/*component*/
+
+@import 'component/breadcrumb';
+@import 'component/loading';
+@import 'component/pagination';
+@import 'component/row-padding';
+@import 'component/social';
+@import 'component/menu';
+@import 'component/imm-service';
+@import 'component/videobanner';
+@import 'component/blog';
+@import 'component/register';
+@import 'component/benifit';
+@import 'component/process';
+@import 'component/condition';
+
+/*modules*/
+
+@import 'module/header';
+@import 'module/footer';
+@import 'module/homepage';
+@import 'module/settlement-general';
+@import 'module/general-page';
+@import 'module/event-general-style';
+
+/*event*/
+
+@import 'event-css/event-2019-05-11';
+@import 'event-css/event-2019-06-26';
+@import 'event-css/event-2019-07-10';
+@import 'event-css/event-2019-07-20';
+@import 'event-css/event-2019-07-27';

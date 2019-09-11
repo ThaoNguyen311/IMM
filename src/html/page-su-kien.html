@@ -1,0 +1,26 @@
+{% extends 'layouts/application.html' %} {% block bodyClass %}class="home-page"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %}
+<div class="breadcrumb">
+    <div class="container">
+        <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="index.html">Trang chủ</a></li>
+            <li class="list-inline-item">Sự Kiện</li>
+        </ul>
+    </div>
+</div>
+<section class="content-wrap py-4">
+    <div class="container">
+        <div class="eventtabs">
+            <ul class="list-inline">
+                <li class="list-inline-item current-menu-item"><a href="#">Tất cả</a></li>
+                <li class="list-inline-item"><a href="#">Mỹ</a></li>
+                <li class="list-inline-item"><a href="#">Úc</a></li>
+                <li class="list-inline-item"><a href="#">Canada</a></li>
+                <li class="list-inline-item"><a href="#">Bồ Đào Nha</a></li>
+                <li class="list-inline-item"><a href="#">Ireland</a></li>
+                <li class="list-inline-item"><a href="#">Đảo Síp</a></li>
+                <li class="list-inline-item"><a href="#">IMM</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,67 @@
+/*footer variable*/
+
+$footer:$primary-color;
+$footer-color: $white;
+
+/*---------------------------*/
+
+.footer {
+    overflow: hidden;
+    @include display-style($footer-color, $footer);
+    a {
+        color: inherit;
+    }
+    &__title {
+        color: $footer-color;
+        font-weight: $font-weight-bold;
+    }
+    &__link {
+        font-size: $font-size-sm;
+        line-height: rem(26);
+        a:hover {
+            text-decoration: underline
+        }
+    }
+    &__menu {
+        a {
+            position: relative;
+            display: inline-block;
+            @include transition(transform 0.3s ease);
+            &:before {
+                color: lighten($footer, 35%);
+                position: absolute;
+                top: 100%;
+                content: attr(data-hover);
+                @include transform(translate3d(0, 0, 0));
+            }
+            @include hover-focus-active {
+                @include transform(translateY(-100%));
+            }
+        }
+        li {
+            overflow: hidden;
+            padding: 0 rem(15)
+        }
+    }
+    &__social a {
+        font-size: rem(25);
+        display: inline-block;
+        width: rem(50);
+        height: rem(50);
+        line-height: rem(50);
+        border-radius: 100%;
+        text-align: center;
+        &:hover {
+            @include display-style($footer, $footer-color);
+        }
+    }
+    &__copyright {
+        background-color: #24273e;
+        p {
+            margin-bottom: 0
+        }
+    }
+    &__important-content {
+        font-size: rem(15)
+    }
+}

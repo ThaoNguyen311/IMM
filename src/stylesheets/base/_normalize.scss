@@ -1,0 +1,75 @@
+$arrow-bg:#939598;
+.slick {
+    &-arrow {
+        width: rem(32);
+        height: rem(32);
+        background-color: $arrow-bg;
+        border: 2px solid $arrow-bg;
+        font-size: 0;
+        border-radius: 100%;
+        @include transition();
+        &:after {
+            width: 0;
+            height: 0;
+            content: "";
+            border: rem(9) solid;
+            @include transition();
+        }
+        &:hover {
+            background: $white;
+            &.slick-prev:after {
+                border-right-color: $arrow-bg
+            }
+            &.slick-next:after {
+                border-left-color: $arrow-bg
+            }
+        }
+    }
+    &-prev {
+        left: -11%;
+        &:after {
+            border-color: transparent $white transparent transparent;
+            margin-left: rem(-11)
+        }
+    }
+    &-next {
+        right: -10%;
+        &:after {
+            border-color: transparent transparent transparent $white;
+            margin-left: rem(10)
+        }
+    }
+}
+
+// Slide Image 
+.slide-img__wrap {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: rem(50);
+        height: rem(50);
+        border-radius: 100%;
+        border: 1px solid $primary-color;
+        top: calc((100% - 50px)/2);
+        background: $primary-color;
+        opacity: 0;
+        @include transition()
+    }
+    .carousel-control-prev {
+        left: 0
+    }
+    .carousel-control-next {
+        right: 0;
+    }
+    &:hover {
+        .carousel-control-next,
+        .carousel-control-prev {
+            opacity: 1;
+        }
+        .carousel-control-next {
+            right: -4rem;
+        }
+        .carousel-control-prev {
+            left: -4rem;
+        }
+    }
+}

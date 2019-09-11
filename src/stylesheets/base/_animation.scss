@@ -1,0 +1,24 @@
+@keyframes ripple {
+    from {
+        width: rem(25);
+        height: rem(25);
+        opacity: .6;
+    }
+    to {
+        width: rem(60);
+        height: rem(60);
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    0%,
+    50% {
+        opacity: 0;
+        bottom: 20px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 0
+    }
+}

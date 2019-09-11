@@ -1,0 +1,36 @@
+.EU-intro {
+    &__title {
+        font-size: rem(20);
+    }
+    .find-nation {
+        position: relative;
+        &:before {
+            content: "";
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: rem(-25);
+            left: rem(29);
+            width: rem(25);
+            height: rem(25);
+            z-index: 1;
+            animation: ripple 2s linear infinite;
+            transform: translate(-50%, -50%);
+        }
+        img {
+            z-index: 2;
+            position: relative;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .video-section,
+    .EU-video {
+        .container {
+            width: 100%;
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+}

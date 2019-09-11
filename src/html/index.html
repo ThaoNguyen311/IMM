@@ -1,0 +1,65 @@
+{% extends 'layouts/application.html' %} {% block bodyClass %}class="home-page"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %} {% include "modules/slidebanner.html"%}
+<section class="service space--30" id="fullservice" data-aos="fade-up">
+    <div class="container">
+        <div class="row">
+            {% include "modules/component/homepage-service.html" %}
+        </div>
+    </div>
+</section>
+<section id="introduce" class="introduce space--60" data-aos="fade-up" data-aos-delay="300">
+    <div class="container">
+        <div class="introduce__title">
+            <h1 class="text-center main-title "> Giới thiệu</h1>
+        </div>
+        <div class="introduce-content">
+            <p class="mb-5">IMM Immigration (công ty di trú IMM) là công ty thành viên đầu tiên của tập đoàn IMM. Là công ty tiên phong đầu tiên tại Việt Nam từ năm 2005 về lĩnh vực di trú và quốc tịch nước ngoài, IMM Immigration cung cấp các dịch vụ tư vấn đầu tư định
+                cư & quốc tịch các nước như Mỹ, Úc, Canada và Châu Âu theo các diện doanh nhân và diện đầu tư. Xem thêm tiểu sử thành lập, giá trị, triết lý kinh doanh và ban điều hành của IMM
+                <ins><a href="https://www.imm.group/vn/">tại đây</a></ins>.</p>
+            <p class="text-center text-lg-right">
+                <a target="_blank" href="https://www.imm.group/vn/" class="btn btn-link text-capitalize">Tìm hiểu thêm về tập đoàn IMM »</a>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="video-section space--60" data-module="videoBackground">
+    {% include "modules/component/national-video-block.html" %}
+</section>
+<section class="EU-intro space--60" data-aos="fade-up">
+    <h4 class="EU-intro__title text-center font-weight-bold">Quốc tịch – Thường trú nhân Châu Âu</h4>
+    <p class="text-center space--30">
+        Châu Âu có nhiều lựa chọn lấy Thường trú và Quốc tịch cho các nhà đầu tư.<br> Tùy theo khả năng tài chính và nhu cầu mà nhà đầu tư nên chọn 1 quốc gia phù hợp
+    </p>
+    <p class="text-center">
+        <a href="./page-dinh-cu-chau-au.html" class="find-nation" title="Quốc tịch thường trú nhân Châu Âu">
+            <img src="../images/home-page/more-eu.png" alt="Quốc tịch thường trú nhân Châu Âu">
+        </a>
+    </p>
+</section>
+<section class="EU-video space--60" data-module="videoBackground" data-aos="fade-up" data-aos-delay="300">
+    {% include "modules/component/EU-video-block.html" %}
+</section>
+<section class="blog space--60" data-aos="fade-up">
+    <div class="container">
+        <div class="blog__title">
+            <h1 class="text-center main-title">Tin tức</h1>
+        </div>
+        <div class="blog-panel">
+            <div class="row">
+                {% include "modules/component/blog-item.html" %}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog space--60" data-aos="fade-up">
+    <div class="container">
+        <div class="blog__title">
+            <h1 class="text-center main-title"><span style="color:#000000">Kiến</span> thức chuyên môn</h1>
+        </div>
+        <div class="blog-panel">
+            <div class="row">
+                {% include "modules/component/blog-item.html" %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

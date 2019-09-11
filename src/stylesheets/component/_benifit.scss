@@ -1,0 +1,121 @@
+$block-color:$white;
+.benifit {
+    &__icon {
+        @include btn-icon(rem(75));
+        border: rem(2) solid $block-color;
+        border-radius: rem(5);
+        line-height: rem(56);
+        .fa {
+            font-size: 75%;
+        }
+    }
+    &__title {
+        line-height: 1.55;
+        @include media-breakpoint-down(md) {
+            font-size: .9rem
+        }
+    }
+    &.america {
+        background: url("/wp-content/themes/immi/images/my/web-us-banner.jpg") 0 0/cover no-repeat;
+    }
+    &.australia {
+        background: url("/wp-content/themes/immi/images/uc/uc-benifit-banner.jpg") 0 0/cover no-repeat;
+        .benifit {
+            &_title {
+                line-height: 1.55;
+                text-align: justify;
+            }
+            &__detail {
+                text-align: justify;
+            }
+            @include media-breakpoint-down(sm) {
+                &_title,
+                &__detail {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &.grenada {
+        background: url("/wp-content/themes/immi/images/grenada/bg-benefit-grenada.jpg") 0 0/cover no-repeat;
+        background-attachment: fixed;
+        .benifit {
+            &__main-title {
+                h2 {
+                    display: inline-block;
+                    margin: auto
+                }
+            }
+            &__text {
+                font-size: rem(16);
+                line-height: 1.75
+            }
+            &__icon {
+                border: 0;
+            }
+            @include media-breakpoint-down(sm) {
+                &__item {
+                    max-width: rem(350);
+                    margin: auto
+                }
+            }
+        }
+    }
+    &.bulgaria {
+        background: url("/wp-content/themes/immi/images/bulgaria/benefit-bulgaria.jpg") 0 0/cover no-repeat;
+        background-attachment: fixed;
+    }
+    &.montenego {
+        background: url("/wp-content/themes/immi/images/montenegro/benefit-montenegro.jpg") 0 0/cover no-repeat;
+        background-attachment: fixed;
+    }
+    &.portugal {
+        background: url("/wp-content/themes/immi/images/portugal/benifit-portugal.jpg") 0 0/cover no-repeat;
+    }
+    &.europe p {
+        line-height: 1.7
+    }
+    &.canada-state {
+        .benifit {
+            &__wrap {
+                background: url("/wp-content/themes/immi/images/canada/state/toronto-skyline.jpg") 0 0/cover no-repeat;
+            }
+        }
+    }
+    &.pine-hill {
+        .h4 {
+            font-size: rem(20);
+            padding: 2.5rem 1rem;
+            color: #5d5d5d;
+            @include media-breakpoint-down(xs) {
+                font-size: 1rem
+            }
+        }
+        .benifit__item {
+            height: 100%;
+        }
+    }
+    &.greek {
+        .benifit_icon {
+            min-height: 40px;
+        }
+    }
+    &__style-01 {
+        background-attachment: fixed;
+        .benifit {
+            &__sub-text {
+                font-size: rem(20);
+                line-height: rem(30);
+            }
+            &__text {
+                font-size: rem(16)
+            }
+            @include media-breakpoint-down(sm) {
+                &__sub-text {
+                    font-size: rem(16);
+                    line-height: rem(24);
+                }
+            }
+        }
+    }
+}

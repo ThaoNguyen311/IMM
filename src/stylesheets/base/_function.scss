@@ -1,0 +1,54 @@
+@for $i from 10 through 80 {
+    .space--#{$i} {
+        margin-bottom: rem($i) !important;
+    }
+}
+
+$color: $primary-color;
+$list: top right bottom left;
+@for $i from 1 through 10 {
+    @each $pos in $list {
+        .border-#{$pos}-#{$i} {
+            border-#{$pos}: rem($i) solid $color;
+        }
+    }
+    .border-all-#{$i} {
+        border: rem($i) solid $color;
+    }
+}
+
+$listPos: top right bottom left;
+$listResUp: xs sm md lg xl;
+$listResDown: xs sm md lg;
+@for $i from 1 through 10 {
+    @each $res in $listResUp {
+        @each $pos in $listPos {
+            @include media-breakpoint-up(#{$res}) {
+                .border-#{$i}-#{$res}-#{$pos} {
+                    border-#{$pos}: rem($i) solid;
+                }
+                .border-#{$i}-#{$res} {
+                    border: rem($i) solid;
+                }
+            }
+        }
+    }
+}
+
+@each $res in $listResUp {
+    @include media-breakpoint-up(#{$res}) {
+        .border-#{$res}-none {
+            border: 0;
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    @each $res in $listResDown {
+        @include media-breakpoint-down(#{$res}) {
+            .w-#{$res}-#{$i*25} {
+                width: #{$i*25}% !important;
+            }
+        }
+    }
+}

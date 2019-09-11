@@ -1,0 +1,291 @@
+{% extends 'layouts/application.html' %} {% block bodyClass %}class="home-page"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %}
+<!-- Slideshow -->
+<section class="slideshow">
+    <div id="owl-carousel" class="carousel slide" data-ride="carousel">
+        <!-- No BEM -->
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#owl-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#owl-carousel" data-slide-to="1"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-none d-sm-block" src="../images/canada/dau-tu-dinh-cu-canada.jpg" alt="dau-tu-dinh-cu-canada.jpg">
+                <img class="d-sm-none" src="../images/canada/dau-tu-dinh-cu-canada-mb.jpg" alt="dau-tu-dinh-cu-canada-mb.jpg">
+            </div>
+            <div class="carousel-item">
+                <img class="d-none d-sm-block" src="../images/canada/chuong-trinh-tinh-bang-news-brunswick-3.jpg" alt="chuong-trinh-tinh-bang-news-brunswick-3.jpg">
+                <img class="d-sm-none" src="../images/canada/chuong-trinh-tinh-bang-news-brunswick-mb.jpg" alt="chuong-trinh-tinh-bang-news-brunswick-mb">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#owl-carousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#owl-carousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</section>
+<!-- End slideshow -->
+<!-- Control bar -->
+<section class="control-bar space--30 bg-default">
+    <div class="container">
+        <p class="m-0 py-4">
+            <a href="#reason" data-id="reason">Tại sao chọn Canada</a>
+            <span class="px-2 px-md-3">|</span>
+            <a href="#condition" data-id="condition">Điều kiện</a>
+            <span class="px-2 px-md-3">|</span>
+            <a href="#project" data-id="project">Dự án</a>
+            <span class="px-2 px-md-3">|</span>
+            <a href="#evaluate" data-id="evaluate">Đăng ký</a>
+        </p>
+    </div>
+</section>
+<!-- End control bar -->
+<section class="text-center space--30" data-aos="fade-up">
+    <div class="container">
+        <h1 class="font-weight-bold pb-4 title-mb">ĐỊNH CƯ CANADA</h1>
+        <iframe class="m-auto" width="1000" height="562" src="https://www.youtube.com/embed/HCzGiyxS_Uc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+<section class="reason" id="reason">
+    <div class="container">
+        <h1 class="border-left-4 title-mb" data-aos="fade-down"><strong>TẠI SAO CHỌN CANADA</strong></h1>
+        <div class="reason__content my-5" data-aos="fade-down" data-aos-delay="300">
+            <div class="row no-gutters align-items-center">
+                <div class="col-2 col-md-1 text-center">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p class="reason__qoute-text col-10 col-md-8 pr-4">
+                    <strong>Các chương trình định cư theo tỉnh bang chỉ định, diện doanh nhân đầu tư được Chính phủ Canada nói chung và các tỉnh bang nói riêng ban hành nhằm thu hút doanh nhân nước ngoài đến sinh sống, làm việc tại Canada. Chương trình góp phần hỗ trợ cho việc phát
+                    triển kinh tế cũng như đáp ứng nhiều nhu cầu định cư của người dân cả nước <br> Đây là con đường giúp chủ doanh nghiệp và nhà đầu tư cùng gia đình có thẻ Thường trú nhân hợp pháp để định cư tại Canada, tận hưởng
+                    những lợi ích nhất định mà thẻ Thường trú nhân mang lại.</strong>
+                </p>
+                <div class="col-md-3 reason__img d-none d-md-block "> <img src="../images/canada/author-canada.png" alt="author-canada.png"></div>
+            </div>
+        </div>
+        <div class="reason__list-wrap">
+            <div class="row">
+                <div class="col-12 col-md-6" data-aos="fade-right">
+                    <ul class="list-inline">
+                        <li class="d-flex">
+                            <p class="reason__icon"><img src="./../images/canada/1-1.png" alt="1-1.png"></p>
+                            <p class="reason__text"><strong>Cả gia đình được sinh sống, làm việc và học tập tại bất cứ nơi nào ở Canada</strong></p>
+                        </li>
+                        <li class="d-flex">
+                            <p class="reason__icon"><img src="./../images/canada/2-1.png" alt="1-1.png"></p>
+                            <p class="reason__text"><strong>Được luật pháp Canada bảo vệ</strong></p>
+                        </li>
+                        <li class="d-flex">
+                            <p class="reason__icon"><img src="./../images/canada/3-1.png" alt="1-1.png"></p>
+                            <p class="reason__text"><strong>Hưởng mọi quyền lợi về y tế, giáo dục, an sinh xã hội như người bản xứ</strong></p>
+                        </li>
+                        <li class="d-flex">
+                            <p class="reason__icon"><img src="./../images/canada/6-1.png" alt="1-1.png"></p>
+                            <p class="reason__text"><strong>Được thi lên quốc tịch và giữ song song quốc tịch Việt Nam – Canada</strong></p>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6" data-aos="fade-left">
+                    <ul class="list-inline">
+                        <li class="d-flex">
+                            <p class="reason__icon"><img src="./../images/canada/4-1.png" alt="1-1.png"></p>
+                            <p class="reason__text"><strong>Được hưởng mọi trợ cấp, phúc lợi như người bản xứ</strong></p>
+                        </li>
+                        <li class="d-flex">
+                            <p class="reason__icon"><img src="./../images/canada/5-1.png" alt="1-1.png"></p>
+                            <p class="reason__text"><strong>Con cái được tự do lựa chọn trường học/ ngành học như người bản xứ</strong></p>
+                        </li>
+                        <li class="d-flex">
+                            <p class="reason__icon"><img src="./../images/canada/5-1.png" alt="1-1.png"></p>
+                            <p class="reason__text"><strong>Miễn học phí cho học sinh từ tiểu học đến hết THPT</strong></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="condition block__img-style" id="condition">
+    <h1 class="main-title text-center text-uppercase">Điều kiện</h1>
+    <div class="condition__wraper bg-img01 py-5">
+        <div class="container">
+            <div class="row">
+                <div class="block__item col-12 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="zoom-in">
+                    <div class="block__wrap">
+                        <img src="./../images/canada/canada-condition-bg.jpg" alt="canada-condition-bg.jpg">
+                        <div class="block__panel text-center text-white">
+                            <div class="block__text">
+                                <p>Sở hữu doanh nghiệp / đảm nhiệm vị trí cấp cao trong ít nhất 3 năm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block__item col-12 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="zoom-in">
+                    <div class="block__wrap ">
+                        <img src="./../images/canada/canada-condition-bg.jpg " alt="canada-condition-bg.jpg ">
+                        <div class="block__panel text-center text-white ">
+                            <div class="block__text ">
+                                <p>Chứng minh trình độ tiếng anh: IELTS tối thiểu 4.0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block__item col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 " data-aos="zoom-in">
+                    <div class="block__wrap ">
+                        <img src="./../images/canada/canada-condition-bg.jpg " alt="canada-condition-bg.jpg ">
+                        <div class="block__panel text-center text-white ">
+                            <div class="block__text ">
+                                <p>Chứng minh tài chính (tối thiểu 600.000 CAD) theo yêu cầu mỗi tỉnh bang</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block__item col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 " data-aos="zoom-in">
+                    <div class="block__wrap ">
+                        <img src="./../images/canada/canada-condition-bg.jpg " alt="canada-condition-bg.jpg ">
+                        <div class="block__panel text-center text-white ">
+                            <div class="block__text ">
+                                <p>Lập dự án kinh doanh khả thi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="project" id="project">
+    <div class="project__title border-bottom-4 py-4">
+        <div class="container">
+            <div class="border-left-4 pt-5 pl-3">
+                <h2 class="title-mb"><strong>CÁC CHƯƠNG TRÌNH ĐẦU TƯ ĐỊNH CƯ CANADA</strong></h2>
+                <h3><strong>DIỆN DOANH NHÂN</strong></h3>
+            </div>
+        </div>
+    </div>
+    <div class="project__wrap py-4">
+        <div class="container">
+            <div class="row justify-content-center border-bottom-4 mb-4">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="project__item text-center space--60">
+                        <a href="./page-tinh-bang-nova-scotia.html" title="TỈNH BANG NOVA SCOTIA">
+                            <figure class="project__img-top mx-auto d-inline-block mb-2">
+                                <img src="../images/canada/nova-scotia.jpg" alt="nova-scotia.jpg">
+                            </figure>
+                            <div class="project__body text-white ">
+                                <p class="mb-2">TỈNH BANG</p>
+                                <h5 class="project__body-title">NOVA SCOTIA</h5>
+                                <p class="project__body-text">Tổng tài sản: tối thiểu 600.000CAD Hạn mức đầu tư: tối thiểu 150.000CAD Loại visa: Giấy Phép Lao Động (WP)</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="project__item text-center space--60">
+                        <a href="./page-tinh-bang-manitoba.html" title="TỈNH BANG MANITOBA">
+                            <figure class="project__img-top mx-auto d-inline-block mb-2">
+                                <img src="../images/canada/manitoba-city.jpg" alt="manitoba-city.jpg">
+                            </figure>
+                            <div class="project__body text-white text-center">
+                                <p class="mb-2">TỈNH BANG</p>
+                                <h5 class="project__body-title">MANITOBA</h5>
+                                <p class="project__body-text">Tổng tài sản: tối thiểu 500.000CAD Hạn mức đầu tư: tối thiểu 150.000CAD Loại visa: Giấy Phép Lao Động (WP)</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="project__item text-center space--60">
+                        <a href="./page-tinh-bang-british-columbia.html" title="TỈNH BANG BRITISH COLUMBIA">
+                            <figure class="project__img-top mx-auto d-inline-block mb-2">
+                                <img src="../images/canada/british-columbia.jpg" alt="british-columbia.jpg">
+                            </figure>
+                            <div class="project__body text-white ">
+                                <p class="mb-2">TỈNH BANG</p>
+                                <h5 class="project__body-title">BRITISH COLUMBIA</h5>
+                                <p class="project__body-text">Tổng tài sản: tối thiểu 600.000CAD Hạn mức đầu tư: tối thiểu 200.000CAD Loại visa: Giấy Phép Lao Động (WP)</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="project__item text-center space--60">
+                        <a href="./page-tinh-bang-saskatchewan.html" title="TỈNH BANG SASKATCHEWAN">
+                            <figure class="project__img-top mx-auto d-inline-block mb-2">
+                                <img src="../images/canada/saskatchewan.jpg" alt="saskatchewan.jpg">
+                            </figure>
+                            <div class="project__body text-white ">
+                                <p class="mb-2">TỈNH BANG</p>
+                                <h5 class="project__body-title">SASKATCHEWAN</h5>
+                                <p class="project__body-text">Tổng tài sản: tối thiểu 500.000CAD Hạn mức đầu tư: tối thiểu 200.000CAD Loại visa: Giấy Phép Lao Động (WP)</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="project__item space--60 text-center">
+                        <a href="./page-tinh-bang-ontario.html" title="TỈNH BANG ONTARIO">
+                            <figure class="project__img-top mx-auto d-inline-block mb-2">
+                                <img src="../images/canada/ontario.jpg" alt="ontario.jpg">
+                            </figure>
+                            <div class="project__body text-white ">
+                                <p class="mb-2">TỈNH BANG</p>
+                                <h5 class="project__body-title">ONTARIO</h5>
+                                <p class="project__body-text">Tổng tài sản: tối thiểu 800.000CAD Hạn mức đầu tư: tối thiểu 500.000CAD Loại visa: Giấy Phép Lao Động (WP)</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="/tinh-bang-prince-edward-island/" title="TỈNH BANG PRINCE EDWARD ISLAND – CANADA">
+                        <img class="card-img-top" src="../images/canada/canada-prince-edward-island.jpg" alt="canada-prince-edward-island.jpg">
+                        <div class="card-body text-white">
+                            <h5 class="card-title">TỈNH BANG PRINCE EDWARD ISLAND – CANADA</h5>
+                            <ul>
+                                <li>Tổng thời gian được cấp Thường trú nhân (PR) 2 năm – một trong những chương trình lấy Thường trú nhân nhanh nhất</li>
+                                <li>Chương trình ký quỹ với mức đầu tư thấp nhất tại Canada</li>
+                                <li>Không trải qua 2 năm thử thách trước khi được cấp PR</li>
+                                <li>Quy trình nội bộ giữa chính phủ PEI và các công ty luật được chỉ định rõ ràng</li>
+                                <li>Chấp nhận hỗ trợ điểm từ người thân (vợ chồng/ con cái)</li>
+                            </ul>
+                            <p class="text-center">
+                                <strong style="background-color: red; color:#ffffff; padding: 0 5px;">* Chương trình hiện đang đóng cửa</strong>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="/tinh-bang-prince-edward-island/" title="TỈNH BANG NEW BRUNSWICK">
+                        <img class="card-img-top" src="../images/canada/New-Brunswick-city.jpg" alt="New-Brunswick-city.jpg">
+                        <div class="card-body text-white">
+                            <h5 class="card-title">TỈNH BANG NEW BRUNSWICK</h5>
+                            <ul>
+                                <li>Thời gian cấp Thường trú nhân (PR) nhanh nhất trong các chương trình doanh nhân Canada</li>
+                                <li>Mức ký quỹ thấp nhất 100.000 CAD</li>
+                                <li>Chấp nhận tài sản cho, tặng, thừa kế</li>
+                                <li>Thang điểm xét duyệt thấp</li>
+                                <li>Văn phòng IMM tại New Brunswick hỗ trợ tận tình cho quá trình làm hồ sơ và an cư của nhà đầu tư</li>
+                            </ul>
+                            <p class="text-center">
+                                <strong style="background-color: red; color:#ffffff; padding: 0 5px;">* Chương trình hiện đang đóng cửa</strong>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "modules/component/evaluate-canada.html"%}
+<!-- hotline -->
+{% include "modules/component/hotline.html"%}
+<!-- end hotline  -->
+{% endblock %}

@@ -1,0 +1,44 @@
+.social{
+	ul{
+		padding-left: 0;
+		li{
+			&:before{
+				display: none;
+			}
+			
+		}
+	}
+	li{
+		display: inline-block;
+		padding:0 19px 0 0;
+		vertical-align: top;
+		line-height: 20px !important;
+		color: #cbcdce;
+		a{
+			padding: 0;
+			display: block;
+			text-align: center;
+			font-size: 22px;
+			color: inherit;
+			text-decoration: none;
+			transition: .25s all;
+			-webkit-transition: .25s all;
+			.fa-facebook{
+				font-size: 19px;
+			}
+			.fa-envelope{
+				font-size: 18px;
+			}
+			&:hover{
+				transition: .25s all;
+				-webkit-transition: .25s all;
+			}
+
+		}
+		
+	}
+	label{
+		font-weight: 300;
+		letter-spacing: 1px;
+	}
+}

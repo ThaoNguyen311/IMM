@@ -1,0 +1,93 @@
+.video-section {
+    &__caption {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        color: $white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            @include transition();
+        }
+    }
+    &__text {
+        max-width: 50%;
+        z-index: 3;
+        text-shadow: 0px 2px 1px #000;
+        h2 a {
+            color: $white;
+            font-weight: $font-weight-bold;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .video-section {
+        &__item {
+            video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                width: 360%;
+                @include transform(translate(-50%, -50%));
+            }
+            &:hover {
+                .video-section__caption:after {
+                    opacity: 0;
+                }
+            }
+        }
+        &__col {
+            min-height: rem(700);
+            overflow: hidden;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .video-section {
+        &__item {
+            margin-bottom: 0;
+            video {
+                display: none
+            }
+        }
+        &__col {
+            margin-bottom: rem(20);
+            &:last-child {
+                margin-bottom: 0
+            }
+        }
+        &__caption:after {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        &__text {
+            max-width: 80%;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .video-section {
+        &__item {
+            img {
+                display: none
+            }
+        }
+    }
+}

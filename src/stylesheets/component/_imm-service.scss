@@ -1,0 +1,37 @@
+@include media-breakpoint-only(md) {
+    .service {
+        &__slider {
+            padding: 0 rem(30);
+            .slick-next {
+                right: 0%;
+            }
+            .slick-prev {
+                left: 0%;
+            }
+        }
+        &__title h5 {
+            font-size: rem(14);
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .service {
+        &__item {
+            width: 50%;
+            display: inline-block !important;
+            text-align: center;
+            margin-bottom: rem(30);
+            vertical-align: middle;
+        }
+        &__logo {
+            width: rem(70);
+            height: rem(70);
+            margin: auto
+        }
+        &__title {
+            min-height: rem(40);
+            margin-bottom: rem(10)
+        }
+    }
+}

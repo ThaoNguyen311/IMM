@@ -5,6 +5,7 @@ export default class slider {
         this.element = $(element);
         this.sliderService();
         this.sliderOnMobile();
+        this.slideTabResponsive();
     }
 
     sliderService() {
@@ -54,6 +55,28 @@ export default class slider {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         autoplay: true
+                    }
+                }
+            ]
+        });
+    }
+    slideTabResponsive() {
+        this.element.find('.tab__panel-sm').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            infinite: false,
+            responsive: [{
+                    breakpoint: 9999,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        dots: true,
                     }
                 }
             ]

@@ -39,6 +39,46 @@ $arrow-bg:#939598;
             margin-left: rem(10)
         }
     }
+    &-slider .slick-track {
+        display: flex;
+        align-items: center;
+    }
+    &-dots {
+        margin: 1rem 0;
+        bottom: auto;
+        top: 110%;
+        li {
+            width: 1rem;
+            height: 1rem;
+            line-height: 1rem;
+            button {
+                background: transparent;
+                border: 0;
+                &:before {
+                    font-family: 'slick';
+                    font-size: 6px;
+                    line-height: 1rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 1rem;
+                    height: 1rem;
+                    content: '•';
+                    text-align: center;
+                    opacity: .25;
+                    color: black;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+            &.slick-active button {
+                background-color: transparent;
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }
 
 // Slide Image 
@@ -70,6 +110,30 @@ $arrow-bg:#939598;
         }
         .carousel-control-prev {
             left: -4rem;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .tab__panel-sm {
+        margin: 0 1.5rem;
+        .slick-arrow {
+            background-color: transparent;
+            color: #000000;
+            border: 0;
+            &:after {
+                display: none
+            }
+            &:before {
+                content: "\f105";
+                @include fontAwesome(1.5rem)
+            }
+            &[aria-disabled="true"] {
+                opacity: 0.4;
+            }
+        }
+        .slick-prev:before {
+            transform: rotate(180deg)
         }
     }
 }

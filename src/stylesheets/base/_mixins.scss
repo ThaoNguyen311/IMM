@@ -83,3 +83,13 @@
         @content;
     }
 }
+
+@mixin fontAwesome ($font-size:rem(14)) {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    font-size: $font-size;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

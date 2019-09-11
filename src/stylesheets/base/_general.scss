@@ -173,56 +173,6 @@ blockquote {
     }
 }
 
-.newstab {
-    border-left: 1px solid $primary-color;
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        li {
-            border-left: rem(8) solid #ededed;
-            margin-bottom: 2rem;
-            @include transition();
-            a {
-                display: block;
-                padding: 1.7rem 0 1.7rem 1.7rem;
-                text-transform: uppercase;
-                font-weight: 700;
-                font-size: 1rem;
-                letter-spacing: 2px;
-            }
-            &.current-menu-item,
-            &:hover {
-                border-left-color: $primary-color
-            }
-        }
-    }
-}
-
-.eventtabs {
-    ul {
-        list-style: none;
-        padding: 0;
-        margin-bottom: 2rem;
-        li {
-            display: inline-block;
-            margin-right: .8rem;
-            a {
-                padding: .5rem 1rem;
-                background: #dcdcdc;
-                color: gray;
-            }
-            &.current-menu-item a {
-                background: gray;
-                color: #fff;
-            }
-            @include hover-focus-active {
-                @extend .current-menu-item
-            }
-        }
-    }
-}
-
 .navigation.pagination {
     justify-content: center;
 }

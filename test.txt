@@ -1,4 +1,8 @@
 tui test
 asdasd
 hung test
+<<<<<<< HEAD
 thao khong edit
+=======
+thao edit
+>>>>>>> 32f53723fe31f8c70faadbc510287a5bfe9af690

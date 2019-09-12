@@ -1,0 +1,56 @@
+.event-2019-08-17 {
+    .event {
+        &__sidebar-bg{
+            min-height: 583px;
+            background: url(https://www.immigration.com.vn/wp-content/themes/tinker/img/180719/register-bg.jpg) repeat-y;
+        }  
+        &__sidebar-content-top, &__sidebar-content-bottom{
+            font-size: 20px;
+            background: url(https://www.immigration.com.vn/wp-content/themes/tinker/img/180719/color-bg.jpg);
+            background-attachment: fixed;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        } 
+        &__card{
+            position: relative; 
+        } 
+        &__ascendant-title{
+            position: absolute;
+            bottom: 16px;
+            left: -5%;
+            background: rgba(109, 2, 2, 0.8196078431372549);
+            width: 110%;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: -16px;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-color: transparent #520c0c;
+                border-style: solid;
+                border-width: 0 16px 16px 0;
+            }
+        }
+        &__display-26
+        {
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 1.55;       
+        }
+        &__border-dot-line-black{
+            border-bottom: 2px dotted #000;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .bg-reponsive {
+            background-position: center right !important;
+        }
+        .event__sumary {
+            font-size: 1rem
+        }
+    }
+}

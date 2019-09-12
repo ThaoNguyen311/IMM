@@ -5,7 +5,7 @@
         background: #CCCCCC;
         display: flex;
         margin-bottom: 2rem;
-        li {
+        .expertise__tab-item {
             text-align: center;
             padding: .9rem;
             flex: 1;
@@ -26,6 +26,7 @@
                 font-weight: bold;
                 color: $primary-color;
                 font-size: 1rem;
+                white-space: nowrap;
             }
             &.current-menu-item:after,
             &:hover:after {
@@ -46,9 +47,109 @@
     &__img {
         max-width: rem(165);
     }
+    @include media-breakpoint-down(xs) {
+        &__img {
+            max-width: 100%;
+            img {
+                width: 100%
+            }
+        }
+    }
 }
 
-//Event Page
+.newstab {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            &.current-menu-item,
+            &:hover {
+                border-color: $primary-color
+            }
+            a {
+                display: block;
+                font-weight: 700;
+            }
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        border-left: 1px solid $primary-color;
+        ul {
+            margin-bottom: 1.5rem;
+            li {
+                border-left: rem(8) solid #ededed;
+                margin-bottom: 2rem;
+                @include transition();
+                a {
+                    padding: 1.7rem 0 1.7rem 1.7rem;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(md) {
+        &__panel {
+            border-top: 1px solid $primary-color;
+            margin-bottom: 3rem !important;
+            display: flex;
+            justify-content: center;
+        }
+        &__item {
+            flex: 1;
+            border-top: .5rem solid #ededed;
+            margin-right: .8rem;
+            text-align: center;
+            a {
+                padding: .5rem;
+                white-space: nowrap;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        padding: 0 2rem;
+    }
+}
+
+.eventtabs {
+    &__panel {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+        li {
+            display: inline-block;
+            margin-right: .8rem;
+            a {
+                padding: .5rem 1rem;
+                background: #dcdcdc;
+                color: gray;
+                display: block;
+                text-align: center;
+                white-space: nowrap;
+            }
+            &.current-menu-item a {
+                background: gray;
+                color: #fff;
+            }
+            @include hover-focus-active {
+                @extend .current-menu-item
+            }
+        }
+    }
+}
+
+.sidebar-news__item {
+    border-bottom: 2px solid #cccccc
+}
+
+
+/*Event Page*/
+
 .event {
     &-section {
         .img-feature {

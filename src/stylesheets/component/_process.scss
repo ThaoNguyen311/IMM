@@ -33,7 +33,7 @@
     //australia
     &--australia .process {
         &__wrap {
-            background: url('/wp-content/themes/immi/images/uc/australia-process-bg.jpg') 0 0/cover no-repeat;
+            background: url('../images/uc/australia-process-bg.jpg') 0 0/cover no-repeat;
             min-height: rem(340);
             display: flex;
             align-items: center;
@@ -41,7 +41,7 @@
         }
     }
     &--portugal {
-        background: url('/wp-content/themes/immi/images/portugal/quytrinh-bo-dao-nha.jpg') 0 0/cover no-repeat;
+        background: url('../images/portugal/quytrinh-bo-dao-nha.jpg') 0 0/cover no-repeat;
         padding: 6rem 0;
         background-attachment: fixed;
     }
@@ -66,7 +66,7 @@
                 left: 0;
                 content: "";
                 min-height: rem(65);
-                background: url('/wp-content/themes/immi/images/grenada/shadow-bottom.png') center/auto no-repeat;
+                background: url('../images/grenada/shadow-bottom.png') center/auto no-repeat;
                 top: rem(-63);
                 @include media-breakpoint-down(sm) {
                     display: none

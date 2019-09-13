@@ -16,10 +16,10 @@ $block-color:$white;
         }
     }
     &.america {
-        background: url("/wp-content/themes/immi/images/my/web-us-banner.jpg") 0 0/cover no-repeat;
+        background: url("../images/my/web-us-banner.jpg") 0 0/cover no-repeat;
     }
     &.australia {
-        background: url("/wp-content/themes/immi/images/uc/uc-benifit-banner.jpg") 0 0/cover no-repeat;
+        background: url("../images/uc/uc-benifit-banner.jpg") 0 0/cover no-repeat;
         .benifit {
             &_title {
                 line-height: 1.55;
@@ -37,7 +37,7 @@ $block-color:$white;
         }
     }
     &.grenada {
-        background: url("/wp-content/themes/immi/images/grenada/bg-benefit-grenada.jpg") 0 0/cover no-repeat;
+        background: url("../images/grenada/bg-benefit-grenada.jpg") 0 0/cover no-repeat;
         background-attachment: fixed;
         .benifit {
             &__main-title {
@@ -62,15 +62,15 @@ $block-color:$white;
         }
     }
     &.bulgaria {
-        background: url("/wp-content/themes/immi/images/bulgaria/benefit-bulgaria.jpg") 0 0/cover no-repeat;
+        background: url("../images/bulgaria/benefit-bulgaria.jpg") 0 0/cover no-repeat;
         background-attachment: fixed;
     }
     &.montenego {
-        background: url("/wp-content/themes/immi/images/montenegro/benefit-montenegro.jpg") 0 0/cover no-repeat;
+        background: url("../images/montenegro/benefit-montenegro.jpg") 0 0/cover no-repeat;
         background-attachment: fixed;
     }
     &.portugal {
-        background: url("/wp-content/themes/immi/images/portugal/benifit-portugal.jpg") 0 0/cover no-repeat;
+        background: url("../images/portugal/benifit-portugal.jpg") 0 0/cover no-repeat;
     }
     &.europe p {
         line-height: 1.7
@@ -78,7 +78,7 @@ $block-color:$white;
     &.canada-state {
         .benifit {
             &__wrap {
-                background: url("/wp-content/themes/immi/images/canada/state/toronto-skyline.jpg") 0 0/cover no-repeat;
+                background: url("../images/canada/state/toronto-skyline.jpg") 0 0/cover no-repeat;
             }
         }
     }

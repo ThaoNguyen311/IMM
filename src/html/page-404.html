@@ -1,0 +1,29 @@
+{% extends 'layouts/application.html' %} {% block bodyClass %}class="home-page"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %}
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
+        <section class="error-404 not-found" style="background: url(http://demo.immigration.com.vn/wp-content/themes/immi/images/404.jpg)">
+            <div class="container">
+                <div class="page-content text-white text-center">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p class="text-404 text-right">404</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="display-404 text-left">
+                                Rất tiếc, trang bạn vừa truy cập không tồn tại.
+                            </p>
+                            <span class="display-404 d-block">
+                                <span>IMM - &nbsp;</span><span class="quote-tag"> Inside out - Từ tâm lan tỏa</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- .page-content -->
+            </div>
+        </section>
+        <!-- .error-404 -->
+    </main>
+    <!-- #main -->
+</div>
+<!-- #primary -->
+{% endblock %}

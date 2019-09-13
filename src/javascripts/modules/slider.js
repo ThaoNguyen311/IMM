@@ -61,7 +61,7 @@ export default class slider {
         });
     }
     slideTabResponsive() {
-        this.element.find('.tab__panel-sm').slick({
+        this.element.find('.tab__panel-sm .menu').slick({
             slidesToShow: 5,
             slidesToScroll: 1,
             autoplay: false,
@@ -72,7 +72,7 @@ export default class slider {
                     settings: "unslick"
                 },
                 {
-                    breakpoint: 768,
+                    breakpoint: 992,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,

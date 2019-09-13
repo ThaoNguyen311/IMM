@@ -25,15 +25,15 @@
     {% include "modules/component/national-video-block.html" %}
 </section>
 <section class="EU-intro space--60" data-aos="fade-up">
-    <h4 class="EU-intro__title text-center font-weight-bold">Quốc tịch – Thường trú nhân Châu Âu</h4>
+    <h4 class="EU-intro__title text-center font-weight-bold text-default">Quốc tịch – Thường trú nhân Châu Âu</h4>
     <p class="text-center space--30">
         Châu Âu có nhiều lựa chọn lấy Thường trú và Quốc tịch cho các nhà đầu tư.<br> Tùy theo khả năng tài chính và nhu cầu mà nhà đầu tư nên chọn 1 quốc gia phù hợp
     </p>
-    <p class="text-center">
+    <!-- <p class="text-center">
         <a href="./page-dinh-cu-chau-au.html" class="find-nation" title="Quốc tịch thường trú nhân Châu Âu">
             <img src="../images/home-page/more-eu.png" alt="Quốc tịch thường trú nhân Châu Âu">
         </a>
-    </p>
+    </p> -->
 </section>
 <section class="EU-video space--60" data-module="videoBackground" data-aos="fade-up" data-aos-delay="300">
     {% include "modules/component/EU-video-block.html" %}
@@ -60,6 +60,12 @@
                 {% include "modules/component/blog-item.html" %}
             </div>
         </div>
+    </div>
+</section>
+<section id="register" class="register-main py-5">
+    <div class="overlay overlay__dark"></div>
+    <div class="container">
+        {% include "modules/component/register-footer.html" %}
     </div>
 </section>
 {% endblock %}

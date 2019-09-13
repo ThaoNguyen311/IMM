@@ -3,6 +3,8 @@
         width: 100%;
         height: rem(195);
         background-size: cover;
+        border: 1px solid #ddd;
+        @include transition();
     }
     &__link {
         display: inline-block;
@@ -12,7 +14,7 @@
     }
     &__detail {
         position: relative;
-        padding-bottom: 2rem;
+        padding-bottom: 0;
     }
     &__name {
         display: block
@@ -24,12 +26,21 @@
     }
     &__des {
         text-align: justify;
-        padding-bottom: 1rem;
+        padding-bottom: 0;
     }
     &__more-view {
         position: absolute;
         right: 0;
         bottom: 0;
+    }
+    &__date {
+        color: #aaaaaa;
+        display: block
+    }
+    &-panel__item:hover {
+        .blog__top {
+            box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.6);
+        }
     }
     .btn__more-view {
         display: inline-block;

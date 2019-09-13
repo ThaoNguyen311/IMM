@@ -14,17 +14,17 @@
         &__item {
             &:first-child {
                 .condition__panel {
-                    background: url('/wp-content/themes/immi/images/uc/australia-condition-01.jpg') 0 0/cover no-repeat
+                    background: url('../images/uc/australia-condition-01.jpg') 0 0/cover no-repeat
                 }
             }
             &:nth-child(2) {
                 .condition__panel {
-                    background: url('/wp-content/themes/immi/images/uc/australia-condition-02.jpg') 0 0/cover no-repeat
+                    background: url('../images/uc/australia-condition-02.jpg') 0 0/cover no-repeat
                 }
             }
             &:last-child {
                 .condition__panel {
-                    background: url('/wp-content/themes/immi/images/uc/australia-condition-03.jpg') 0 0/cover no-repeat
+                    background: url('../images/uc/australia-condition-03.jpg') 0 0/cover no-repeat
                 }
             }
         }
@@ -35,7 +35,7 @@
         }
     }
     &--grenada {
-        background: url('/wp-content/themes/immi/images/grenada/bg-condition-grenada.jpg') 0 0/cover no-repeat;
+        background: url('../images/grenada/bg-condition-grenada.jpg') 0 0/cover no-repeat;
         padding: rem(80) 0;
         .condition {
             &__item {
@@ -206,7 +206,7 @@
                 &:before {
                     height: rem(150);
                     width: rem(50);
-                    background: url('/wp-content/themes/immi/images/montenegro/flag-condition-01.png') 0 0/contain no-repeat;
+                    background: url('../images/montenegro/flag-condition-01.png') 0 0/contain no-repeat;
                 }
             }
             &__text {
@@ -216,7 +216,7 @@
                 &:nth-child(2),
                 &:nth-child(5) {
                     .condition__item:before {
-                        background: url('/wp-content/themes/immi/images/montenegro/flag-condition-02.png') 0 0/contain no-repeat;
+                        background: url('../images/montenegro/flag-condition-02.png') 0 0/contain no-repeat;
                     }
                 }
             }

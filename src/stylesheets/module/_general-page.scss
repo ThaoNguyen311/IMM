@@ -5,7 +5,7 @@
         background: #CCCCCC;
         display: flex;
         margin-bottom: 2rem;
-        .expertise__tab-item {
+        li {
             text-align: center;
             padding: .9rem;
             flex: 1;
@@ -32,27 +32,31 @@
             &:hover:after {
                 opacity: 1;
             }
+            @include media-breakpoint-down(sm) {
+                padding: .5rem
+            }
         }
     }
     &__item {
         background-color: #F4F4F4;
         @include transition;
+        height: 100%;
         &:hover {
             box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2)
         }
     }
-    &__title {
-        margin: rem(10) 0;
-    }
     &__img {
-        max-width: rem(165);
+        min-width: 150px;
+        img {
+            display: block
+        }
     }
-    @include media-breakpoint-down(xs) {
-        &__img {
-            max-width: 100%;
-            img {
-                width: 100%
-            }
+    &__title {
+        margin-bottom: 0
+    }
+    @include media-breakpoint-down(sm) {
+        &__title {
+            margin-top: 0
         }
     }
 }
@@ -94,11 +98,8 @@
         &__panel {
             border-top: 1px solid $primary-color;
             margin-bottom: 3rem !important;
-            display: flex;
-            justify-content: center;
         }
-        &__item {
-            flex: 1;
+        ul li {
             border-top: .5rem solid #ededed;
             margin-right: .8rem;
             text-align: center;
@@ -110,17 +111,20 @@
                 margin-right: 0;
             }
         }
-    }
-    @include media-breakpoint-down(sm) {
-        padding: 0 2rem;
+        .slick-dots li {
+            border-top: 0;
+            margin: 0 8px;
+        }
     }
 }
 
 .eventtabs {
-    &__panel {
+    ul {
         list-style: none;
         padding: 0;
         margin-bottom: 2rem;
+    }
+    &__panel {
         li {
             display: inline-block;
             margin-right: .8rem;
@@ -137,14 +141,17 @@
                 color: #fff;
             }
             @include hover-focus-active {
-                @extend .current-menu-item
+                @extend .current-menu-item;
             }
         }
     }
 }
 
 .sidebar-news__item {
-    border-bottom: 2px solid #cccccc
+    border-bottom: 1px solid #cccccc;
+    .title-thumb-news h5 {
+        font-size: rem(14)
+    }
 }
 
 
@@ -153,10 +160,70 @@
 .event {
     &-section {
         .img-feature {
-            a.img-link {
+            overflow: hidden;
+            .img-link {
                 width: 100%;
                 height: rem(170);
                 display: inline-block;
+                position: relative;
+                &:before,
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: rgba(0, 0, 0, 0.7);
+                    border-left: 3px solid $primary-color;
+                    border-right: 3px solid $primary-color;
+                    z-index: 1;
+                    @include transition(all 0.35s ease);
+                }
+                &:before {
+                    transform: skew(45deg) translateX(-155%);
+                }
+                &:after {
+                    transform: skew(45deg) translateX(155%)
+                }
+            }
+            .figcaption {
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                z-index: 2;
+                -webkit-transform: translate(-50%, -50%) scale(0.5);
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 0;
+                box-shadow: 0 0 10px #000000;
+                .event__view-detail {
+                    background-color: #000000;
+                    border: 2px solid $primary-color;
+                    color: white;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    margin: 0;
+                    padding: rem(5) rem(10);
+                    text-transform: uppercase;
+                    display:inline-block;
+                }
+            }
+        }
+        .single-blog {
+            &:hover {
+                .img-feature .img-link {
+                    &:before {
+                        transform: skew(45deg) translateX(-55%);
+                    }
+                    &:after {
+                        transform: skew(45deg) translateX(55%);
+                    }
+                }
+                .figcaption {
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1;
+                }
             }
         }
     }
@@ -168,7 +235,7 @@
 }
 
 .error-404 {
-    background: url('/wp-content/themes/immi/images/404.jpg') 0 0/cover no-repeat;
+    background: url('../images/404.jpg') 0 0/cover no-repeat;
     .page-content {
         padding: 12rem 0;
     }
@@ -178,23 +245,22 @@
     }
     .display-404 {
         font-size: 1.5rem;
+        display: inline-block;
+        position: relative;
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
     }
     .quote-tag {
-        position: absolute;
         white-space: nowrap;
-        &:nth-child(2) {
-            animation-name: fade;
-            animation-fill-mode: both;
-            animation-iteration-count: infinite;
-            animation-duration: 2.5s;
-            animation-direction: alternate-reverse;
-        }
-        &:nth-child(3) {
-            animation-name: fade;
-            animation-fill-mode: both;
-            animation-iteration-count: infinite;
-            animation-duration: 2.5s;
-            animation-direction: alternate;
-        }
+        overflow: hidden;
+        border-right: .1em solid white;
+        letter-spacing: 2px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        animation: typing 4s steps(30, end) infinite, blink-caret .5s step-end infinite;
+        max-width: rem(350);
     }
 }

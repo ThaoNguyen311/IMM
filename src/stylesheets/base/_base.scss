@@ -9,6 +9,8 @@ button,
     }
 }
 
+
+
 a {
     @include link-color($link-color, $link-hover-color);
     @include transition();
@@ -95,6 +97,12 @@ select,
         box-shadow: none;
         border-color: #ced4da
     }
+}
+
+input, input.search-field {
+    border: 1px solid #dddddd;
+    height: 2.5rem;
+    padding: .5rem;
 }
 
 @include media-breakpoint-down(xs) {

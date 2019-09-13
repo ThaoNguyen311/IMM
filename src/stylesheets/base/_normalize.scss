@@ -114,7 +114,7 @@ $arrow-bg:#939598;
     }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     .tab__panel-sm {
         margin: 0 1.5rem;
         .slick-arrow {

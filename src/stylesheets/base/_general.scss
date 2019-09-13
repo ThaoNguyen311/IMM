@@ -39,7 +39,7 @@
     }
     &:before {
         left: 0;
-        background: url('/wp-content/themes/immi/images/grenada/shadow.png') 0 0/contain no-repeat;
+        background: url('../images/grenada/shadow.png') 0 0/contain no-repeat;
     }
 }
 
@@ -49,7 +49,7 @@
     margin: auto;
     &:after {
         right: 0;
-        background: url('/wp-content/themes/immi/images/grenada/shadow-right.png') 0 0/contain no-repeat;
+        background: url('../images/grenada/shadow-right.png') 0 0/contain no-repeat;
     }
 }
 
@@ -65,14 +65,14 @@
         left: 0;
         content: "";
         min-height: rem(65);
-        background: url('/wp-content/themes/immi/images/grenada/shadow-top.png') center/auto no-repeat;
+        background: url('../images/grenada/shadow-top.png') center/auto no-repeat;
         top: rem(-2);
         z-index: 999;
     }
 }
 
 .bg-img01 {
-    background: url('/wp-content/themes/immi/images/canada/bgf.png') 0 0/auto repeat;
+    background: url('../images/canada/bgf.png') 0 0/auto repeat;
 }
 
 .parallax-style {

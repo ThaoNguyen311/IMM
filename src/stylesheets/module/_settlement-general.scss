@@ -60,10 +60,10 @@ $block-color:$white;
         }
     }
     &--australia {
-        background: url('/wp-content/themes/immi/images/uc/bg-danh-gia-ho-so-uc.jpg') 0 0/cover no-repeat;
+        background: url('../images/uc/bg-danh-gia-ho-so-uc.jpg') 0 0/cover no-repeat;
     }
     &--canada {
-        background: url('/wp-content/themes/immi/images/canada/bg-canada-1.jpg') 0 0/cover no-repeat;
+        background: url('../images/canada/bg-canada-1.jpg') 0 0/cover no-repeat;
     }
 }
 
@@ -114,7 +114,7 @@ $block-color:$white;
     }
     //Grenada
     &--grenada {
-        background: url('/wp-content/themes/immi/images/grenada/bg-why-grenada.jpg') 0 0/cover no-repeat;
+        background: url('../images/grenada/bg-why-grenada.jpg') 0 0/cover no-repeat;
         padding: rem(90) 0;
         background-attachment: fixed;
         .reason__container {
@@ -128,14 +128,14 @@ $block-color:$white;
     }
     //Bulgaria
     &--bulgaria {
-        background: url('/wp-content/themes/immi/images/bulgaria/bg-bul.jpg') 0 0/cover no-repeat;
+        background: url('../images/bulgaria/bg-bul.jpg') 0 0/cover no-repeat;
         padding: rem(90) 0;
         background-attachment: fixed;
         @extend .reason--grenada;
     }
     //Montenegro
     &--montenegro {
-        background: url('/wp-content/themes/immi/images/montenegro/bg-montenegro.jpg') 0 0/cover no-repeat;
+        background: url('../images/montenegro/bg-montenegro.jpg') 0 0/cover no-repeat;
         padding: rem(90) 0;
         .reason {
             &__list {
@@ -222,7 +222,7 @@ $block-color:$white;
         }
     }
     &__btn {
-        background: url('/wp-content/themes/immi/images/grenada/btn-more-chau-au.png') 0 0 no-repeat;
+        background: url('../images/grenada/btn-more-chau-au.png') 0 0 no-repeat;
         color: $block-color;
         display: inline-block;
         width: rem(230);
@@ -238,7 +238,7 @@ $block-color:$white;
         }
     }
     &--bulgaria {
-        background: url('/wp-content/themes/immi/images/bulgaria/bg-bulgaria.png') center 5% no-repeat;
+        background: url('../images/bulgaria/bg-bulgaria.png') center 5% no-repeat;
         @include media-breakpoint-down(sm) {
             background-size: contain
         }
@@ -248,7 +248,7 @@ $block-color:$white;
 //Grenada
 .nation {
     &__title {
-        background: url('/wp-content/themes/immi/images/grenada/bg-list.png') 0 0/cover repeat-x;
+        background: url('../images/grenada/bg-list.png') 0 0/cover repeat-x;
         @include media-breakpoint-down(sm) {
             h3 {
                 font-size: rem(18);
@@ -311,7 +311,7 @@ $block-color:$white;
 
 .visa {
     padding: 9rem 0;
-    background: url('/wp-content/themes/immi/images/portugal/chuong-trinh-golden-visa.jpg') center/cover no-repeat;
+    background: url('../images/portugal/chuong-trinh-golden-visa.jpg') center/cover no-repeat;
     &__wrap {
         color: $block-color;
         padding: 1rem;
@@ -330,6 +330,10 @@ $block-color:$white;
         border: 0;
         @include css3-prefix('box-shadow',
         '3px 3px 10px 0px rgba(99,99,99,.54)');
+        @include transition();
+        &:hover {
+            box-shadow: none;
+        }
     }
     .more-view {
         position: absolute;
@@ -478,7 +482,7 @@ $block-color:$white;
             top: 100%;
             height: 120%;
             width: 100%;
-            background: url('/wp-content/themes/immi/images/greek/shadow.png') 0 0/100% no-repeat;
+            background: url('../images/greek/shadow.png') 0 0/100% no-repeat;
         }
     }
     ul li {
@@ -531,7 +535,7 @@ $block-color:$white;
     select,
     input[type="text"],
     input[type="email"] {
-        height: rem(43)
+        height: 3rem;
     }
     .input-group-prepend {
         order: 2;
@@ -547,7 +551,7 @@ $block-color:$white;
 
 //page pine hill villamoura
 .summary {
-    background: url('/wp-content/themes/immi/images/bgph.jpg') 0 0/cover no-repeat;
+    background: url('../images/bgph.jpg') 0 0/cover no-repeat;
     padding: 10rem 0;
     color: white;
     @include media-breakpoint-down(md) {

@@ -1,19 +1,28 @@
-$input-color: $white;
+$input-color: #fafafa;
 $input-bg: transparent;
-$input-border-color: $input-color;
+$input-border-color:#989898;
+.register-main {
+    background: url('../images/register-bg.jpg') 0 0/cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
 .register {
     .form {
         &-control {
-            @include display-style($input-color, $input-bg);
-            border: 0;
-            border-bottom: 2px solid $input-border-color;
-            font-size: rem(13);
+            border: 1px solid $input-border-color;
+            background: $input-bg;
+            color: $input-color;
             padding: $input-btn-padding-y $input-btn-padding-x;
-            border-radius: $input-border-radius;
+            border-radius: 0;
+            font-size: rem(14);
             @include placeholder($input-color);
+            @include transition();
             @include hover-focus-active {
                 box-shadow: none;
                 outline: none;
+                background: rgba(255, 255, 255, 0.35) !important;
+                border: 1px solid #fff !important;
             }
             option {
                 color: #000000
@@ -30,17 +39,42 @@ $input-border-color: $input-color;
             }
         }
         &-submit {
-            button.btn {
+            button.btn__register {
                 border-radius: 0;
                 border: 1px solid;
                 border-color: #ccc #ccc #bbb;
                 font-weight: $font-weight-bold;
                 font-size: rem(13);
-                @include display-style($black, $white);
+                min-width: rem(200);
+                @include display-style($black,
+                $white);
                 &:hover {
-                    @include display-style($white, $primary-color-dark)
+                    @include display-style($white,
+                    $primary-color-dark)
                 }
             }
         }
+    }
+    &__title {
+        position: relative;
+        letter-spacing: 1px;
+    }
+    &__panel {
+        position: relative;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &__dark {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    &__light {
+        background-color: #ffffff;
+        opacity: 0.3;
     }
 }

@@ -5,7 +5,7 @@
 }
 
 %bg-bulgaria {
-    background: url('/wp-content/themes/immi/images/bulgaria/bg-video-bulgaria.png') 0 0/cover no-repeat;
+    background: url('../images/bulgaria/bg-video-bulgaria.png') 0 0/cover no-repeat;
     padding: rem(80) 0;
     @include media-breakpoint-down(xs) {
         padding-bottom: 0

@@ -1,0 +1,40 @@
+.event-2019-08-30 {
+    .event {
+        &__item-content {
+            &:nth-child(2n+1) {
+                border: 1px solid #c20601;
+                .event__number {
+                    color: #c20601
+                }
+            }
+            &:nth-child(2n) {
+                border: 1px solid #001ca5;
+                .event__number {
+                    color: #001ca5
+                }
+            }
+        }
+        &__number:after {
+            display: none
+        }
+    }
+    @media screen and (max-width:767px) {
+        .event__sumary {
+            font-size: 1rem
+        }
+        .left-style {
+            width: 100%;
+            height: 30rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    @media screen and (min-width:768px) {
+        .left-style {
+            width: 100%;
+            height: 100%;
+            box-shadow: 1px 0px 5px 2px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+    }
+}

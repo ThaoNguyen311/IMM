@@ -288,3 +288,12 @@ blockquote {
         border-color: black !important
     }
 }
+
+.single-tin_tuc .entry-content {
+    img,
+    iframe,
+    figure {
+        display: block;
+        margin: 1rem auto;
+    }
+}

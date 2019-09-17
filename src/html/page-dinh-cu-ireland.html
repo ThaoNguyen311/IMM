@@ -1,0 +1,100 @@
+{% extends 'layouts/application.html' %} {% block bodyClass %}class="home-page"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %}
+<section class="banner">
+    <img class="d-none d-sm-block" src="../images/ireland/dinh-cu-ireland-banner.jpg" alt="dinh-cu-ireland-banner.jpg">
+    <img class="d-sm-none" src="../images/ireland/dinh-cu-ireland-banner.jpg" alt="dinh-cu-ireland-banner.jpg">
+</section>
+<!-- Control bar -->
+<section class="control-bar space--30 bg-default">
+    <div class="container">
+        <p class="m-0 py-4">
+            <a href="#first-section">Thường trú nhân Ireland</a>
+            <span class="px-2 px-md-3">|</span>
+            <a href="#benifit">Lợi ích</a>
+            <span class="px-2 px-md-3">|</span>
+            <a href="#condition">Điều kiện</a>
+            <span class="px-2 px-md-3">|</span>
+            <a href="#project">Dự án</a>
+            <span class="px-2 px-md-3">|</span>
+            <a href="#process">Quy trình</a>
+            <span class="px-2 px-md-3">|</span>
+            <a href="#reason">Tại sao chọn Ireland </a>
+        </p>
+    </div>
+</section>
+<!-- End control bar -->
+<section id="first-section" class="text-center py-5" data-aos="fade-up" style="background: url(../images/ireland/bg-dautu.png)">
+    <div class="container">
+        <h1 class="font-weight-bold pb-4 title-mb">ĐẦU TƯ - ĐỊNH CƯ IRELAND</h1>
+        <p class="text-center">"Đầu tư - định cư Ireland là chương trình nộp hồ sơ lấy thẻ thường trú nhân Ireland - Stamp 4 dành cho các nhà đầu tư ngoài Liên minh châu Âu (EU) muốn có quyền cư trú lâu dài tại Ireland cho cả gia đình. Thông qua chương trình đầu tư, vợ/ chồng
+            cùng con cái còn phụ thuộc của nhà đầu tư sẽ được cấp quyền cư trú dài hạn và được hưởng quyền lợi sinh sống, giáo dục và việc làm tại Ireland như người bản xứ. "</p>
+    </div>
+</section>
+<!-- Benifit -->
+<section id="benifit" class="benifit ireland pb-5 pt-2 text-white" data-aos="fade-up">
+    <h2 class="text-center text-uppercase my-5"><b>Lợi thế khi đầu tư định cư Ireland</b></h2>
+    <div class="container">
+        <div class="row">
+            <div class="benifit__item col-12 col-md-4 mb-4 text-center">
+                <div class="benifit__icon display-4 mb-3 mb-md-5">
+                    <img src="../images/ireland/loithe-01.svg" alt="loithe-01.svg">
+                </div>
+                <div class="benifit__detail">
+                    <h4>Điều kiện dễ dàng</h4>
+                    <p>Không yêu cầu về: độ tuổi, trình độ chuyên môn, sở hữu doanh nghiệp, trình độ tiếng Anh, không yêu cầu khám sức khỏe</p>
+                </div>
+            </div>
+            <div class="benifit__item col-12 col-md-4 mb-4 text-center">
+                <div class="benifit__icon display-4 mb-3 mb-md-5 ">
+                    <img src="../images/ireland/loithe-02.svg" alt="loithe-02.svg">
+                </div>
+                <div class="benifit__detail">
+                    <h4>Đầu tư an toàn</h4>
+                    <p>Chỉ chuyển tiền khi hồ sơ được chấp thuận</p>
+                </div>
+            </div>
+            <div class="benifit__item col-12 col-md-4 text-center">
+                <div class="benifit__icon  display-4 mb-3 mb-md-5 ">
+                    <img src="../images/ireland/loithe-03.svg" alt="loithe-03.svg">
+                </div>
+                <div class="benifit__detail">
+                    <h4>Quy trình nhanh chóng</h4>
+                    <p>Thời gian xử lý hồ sơ ngắn, chỉ từ 4 - 6 tháng</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End benifit -->
+<!-- condition -->
+<section class="condition condition--portulgal block__img-style py-5" id="condition">
+    <h1 class="main-title text-center text-uppercase">Điều kiện</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="block__item col-12 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="zoom-in">
+                <div class="block__wrap">
+                    <img src="../images/ireland/ico-dieukien-01.svg" alt="ico-dieukien-01.svg">
+                    <div class="block__panel text-center text-white">
+                        <div class="block__text">
+                            <p>Có lý lịch tư pháp trong sạch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block__item col-12 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="zoom-in">
+                <div class="block__wrap ">
+                    <img src="./../images/ireland/ico-dieukien-02.svg" alt="condition-02.png">
+                    <div class="block__panel text-center text-white ">
+                        <div class="block__text ">
+                            <p>Đầu tư mua bất động sản giá tối thiểu 500.000 EUR tại Bồ Đào Nha, duy trì bất động sản trong 5 năm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center mt-5">
+                <a href="#" class="view-project"><span>Xem dự án</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end condition  -->
+{% endblock %}

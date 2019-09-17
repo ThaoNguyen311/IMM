@@ -1,0 +1,21 @@
+.event-2019-07-27 {
+    .event {
+        &__item-content {
+            &:nth-child(2n) {
+                background: rgb(2, 56, 190);
+                background: linear-gradient(90deg, rgba(2, 56, 190, 1) 0%, rgba(2, 56, 140, 1) 50%, rgba(25, 23, 38, 1) 100%);
+            }
+        }
+        &__number:after {
+            border-bottom-width: 2px
+        }
+    }
+    @media screen and (max-width:767px) {
+        .bg-reponsive {
+            background-position: center right !important;
+        }
+        .event__sumary {
+            font-size: 1rem
+        }
+    }
+}

@@ -59,19 +59,29 @@
         select {
             color: $black;
         }
+        .form-control {
+            height: auto;
+            padding: .5rem 1rem;
+        }
     }
     &__submit-wrap {
         display: inline-block;
         position: relative;
         &.btn-img {
-            .event__btn-submit-text {
-                border: 0;
-                background-color: transparent;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
+            .event__btn-submit {
+                &-content {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &-text {
+                    border: 0;
+                    background-color: transparent;
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
     }
@@ -80,10 +90,6 @@
         padding: .4rem 1.5rem;
         border: 2px solid #eb3232;
         @include transition();
-        &--style01 {
-            border-radius: .5rem !important;
-            box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.72);
-        }
         &:hover {
             border-color: #eb3232;
         }
@@ -130,8 +136,7 @@
 .btn-event {
     &--default {
         @include display-style(#ffffff, #eb3232);
-        border-color: #eb3232;
-        border-radius: rem(4);
+        @include btnSubmit(#eb3232, rem(4), normal);
         &:hover {
             @include display-style (#eb3232, #ffffff);
         }
@@ -179,6 +184,24 @@
 
 .sidebar-shadow {
     box-shadow: 2px 2px 15px 0px #050505;
+}
+
+div.wpcf7-validation-errors {
+    display: none !important
+}
+
+.ajax-loader {
+    position: absolute;
+    right: 6px;
+    top: 22%;
+    &.is-active {
+        background-image: none !important;
+        &:after {
+            content: "\f1ce";
+            @include fontAwesome();
+            animation: rotation 1s infinite linear;
+        }
+    }
 }
 
 // Responsive

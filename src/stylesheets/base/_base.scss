@@ -9,8 +9,6 @@ button,
     }
 }
 
-
-
 a {
     @include link-color($link-color, $link-hover-color);
     @include transition();
@@ -84,6 +82,10 @@ label {
     }
 }
 
+#content.site-content {
+    overflow-x: inherit;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden
@@ -99,7 +101,8 @@ select,
     }
 }
 
-input, input.search-field {
+input,
+input.search-field {
     border: 1px solid #dddddd;
     height: 2.5rem;
     padding: .5rem;

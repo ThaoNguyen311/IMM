@@ -93,3 +93,32 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+@mixin formStyle($border-color:inherit, $radius:0, $font-style:normal, $color: inherit) {
+    border-color: $border-color;
+    border-radius: $radius;
+    color: $color;
+    font-style: $font-style;
+    &:-moz-placeholder {
+        color: $color;
+        font-style: $font-style
+    }
+    &::-moz-placeholder {
+        color: $color;
+        font-style: $font-style
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        font-style: $font-style
+    }
+    &::-webkit-input-placeholder {
+        color: $color;
+        font-style: $font-style
+    }
+}
+
+@mixin btnSubmit($border-color:inherit, $radius:0, $font-style:normal) {
+    border-color: $border-color;
+    border-radius: $radius;
+    font-style: $font-style;
+}

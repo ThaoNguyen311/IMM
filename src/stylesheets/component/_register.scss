@@ -16,6 +16,7 @@ $input-border-color:#989898;
             padding: $input-btn-padding-y $input-btn-padding-x;
             border-radius: 0;
             font-size: rem(14);
+            height: auto;
             @include placeholder($input-color);
             @include transition();
             @include hover-focus-active {
@@ -39,13 +40,14 @@ $input-border-color:#989898;
             }
         }
         &-submit {
-            button.btn__register {
+            .btn__register {
                 border-radius: 0;
                 border: 1px solid;
                 border-color: #ccc #ccc #bbb;
                 font-weight: $font-weight-bold;
                 font-size: rem(13);
                 min-width: rem(200);
+                padding: 0;
                 @include display-style($black,
                 $white);
                 &:hover {

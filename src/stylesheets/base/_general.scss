@@ -57,6 +57,26 @@
     color: $primary-color
 }
 
+.title-style-01 {
+    position: relative;
+    color: $primary-color;
+    margin-bottom: 2rem;
+    &:after {
+        content: "";
+        width: 3rem;
+        height: 2px;
+        background: $primary-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 1rem;
+    }
+}
+
 .shadow-top {
     position: relative;
     &:before {
@@ -166,10 +186,10 @@ blockquote {
 @include media-breakpoint-down(sm) {
     .title-mb,
     .main-title {
-        font-size: rem(25)
+        font-size: 5.5vw
     }
     .main-special-title {
-        font-size: rem(20)
+        font-size: 1.2rem
     }
 }
 

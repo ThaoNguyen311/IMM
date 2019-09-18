@@ -42,3 +42,31 @@
 		letter-spacing: 1px;
 	}
 }
+.social-popup{
+	li{
+		display: inline-block;
+		padding: 0 19px 0 0;
+		vertical-align: top;
+		line-height: 20px!important;
+		color: #cbcdce;
+		a{
+			i{
+				padding: 10px;
+				color: #fff;
+				
+			}
+			.fa-facebook{
+				background: #3b5998;
+			}
+			.fa-linkedin{
+				background: #007bb5;
+			}
+			.fa-envelope-o{
+				background:#3b3b3b;
+			}
+			.fa-link{
+				background: #6831b3;
+			}
+		}
+	}
+}

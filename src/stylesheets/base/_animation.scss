@@ -41,3 +41,24 @@
         -webkit-transform: rotate(359deg);
     }
 }
+
+.effect-01 {
+    position: relative;
+    overflow: hidden;
+    &__detail {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        padding: 1rem;
+        color: white;
+        background: rgba(black, 0.7);
+        @include transform(translate3d(0, 100%, 0));
+        @include transition(transform 0.35s);
+    }
+    &:hover {
+        .effect-01__detail {
+            @include transform(translate3d(0, 0, 0))
+        }
+    }
+}

@@ -207,6 +207,30 @@ $block-color:$white;
         @include transition();
         border: 4px solid transparent
     }
+    &.ireland {
+        .project {
+            &__detail {
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.7);
+                color: white;
+                padding: 1rem;
+            }
+            &__item {
+                position: relative;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+                &:hover {
+                    img {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .overview {

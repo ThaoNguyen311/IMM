@@ -14,7 +14,7 @@ export default class countdown {
       hour = minute * 60,
       day = hour * 24;
 
-let countDown = new Date('Nov 12, 2019 00:00:00').getTime(),
+let countDown = new Date('Nov 21, 2019 00:00:00:00').getTime(),
     x = setInterval(function() {
 
       let now = new Date().getTime(),

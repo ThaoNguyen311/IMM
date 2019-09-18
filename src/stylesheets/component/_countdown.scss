@@ -1,0 +1,195 @@
+.bg-blue {
+    background: #020063;
+  }
+  .text-blue {
+      color: #020063;
+    }
+  .letter-spacing2 {
+    letter-spacing: 2px;
+  }
+  .count-down{
+      position: relative;
+      
+      ul{
+          display: flex;
+          padding: 0;
+          justify-content: center;
+          li{
+              position: relative;
+              display: inline-block;
+              font-size: 1.5em;
+              list-style-type: none;
+              padding: 0 1em;
+              text-transform: uppercase;
+              text-align: center;
+              .count-time {
+                  display: block;
+                  font-size: 5rem;
+                  font-weight: 600;
+              }
+              &::before{
+                  content: "";
+                  position: absolute;
+                  top: 27px;
+                  right: 0;
+                  height: 75px;
+                  width: 1px;
+                  background: rgb(2,0,99);
+                  background: linear-gradient(0deg, rgba(2,0,99,1) 0%, rgba(173,31,35,1) 50%, rgba(2,0,99,1) 100%);            
+              }
+              &:last-child{
+                  &::before{
+                     content: none; 
+                  }
+  
+              }
+             
+          }
+      }
+  }
+  .font60{
+      font-size: 3rem;
+      font-weight: 700;
+  }
+  .font35{
+      font-size: 2.5rem;
+  }
+  .font70{
+      font-size: 7rem;
+      font-weight: 700;
+  }
+  .btn-event--border{
+      border-radius: 30px!important;
+  }
+  .mt-55{
+      margin-top: -55px;
+  }
+  .ml-33{
+      margin-left: -33px;
+  }
+  @media screen and (max-width:1750px) and (min-width:1200px){
+      .count-down ul{
+          li {
+              padding: 0 0.5em;
+              .count-time{
+                  font-size: 2rem;
+              }
+              &::before{
+                  top:10px;
+              }
+              span{
+                  font-size: 0.8rem;
+              }
+  
+          }
+      }
+      .font60{
+          font-size: 2rem;
+      }
+      .font35 {
+          font-size: 1.5rem;
+      }
+      .font70 {
+          font-size: 6rem;
+      }
+      .mt-55{
+          margin-top: -25px;
+      }
+      .event__btn-size{
+          font-size: 1rem;
+      }
+  }
+  @include media-breakpoint-down(lg) {
+      .font60{
+          font-size: 1.5rem;
+      }
+      .font35 {
+          font-size: 1rem;
+      }
+      .font70 {
+          font-size: 5rem;
+      }
+      .count-down ul{
+          li {
+              padding: 0 0.5em;
+              .count-time{
+                  font-size: 1.5em;
+              }
+              &::before{
+                  top:10px;
+              }
+              span{
+                  font-size: 0.6em;
+              }
+  
+          }
+      }
+      .mt-55{
+          margin-top: 0;
+      }
+      .event__btn-size{
+          font-size: 1rem;
+      }
+  }
+  @include media-breakpoint-down(md) {
+      .font60{
+          font-size: 1.5rem;
+      }
+      .font35 {
+          font-size: 1rem;
+      }
+      .font70 {
+          font-size: 5rem;
+      }
+      .count-down ul{
+          li {
+              padding: 0 0.5em;
+              .count-time{
+                  font-size: 1.5em;
+              }
+              &::before{
+                  top:10px;
+              }
+              span{
+                  font-size: 0.6em;
+              }
+  
+          }
+      }
+      .mt-55{
+          margin-top: 0;
+      }
+      .event__btn-size{
+          font-size: 1rem;
+      }
+  }
+  @media screen and (max-width:767px){
+      .count-down ul{
+          
+          align-items: center;
+          justify-content: center;
+          li {
+              .count-time{
+                  font-size: 1.5em;
+              }
+              &::before{
+                  top:10px;
+              }
+          }
+      }
+      .font60, .font35{
+          font-size: 1.5rem;
+      }
+      .font70 {
+          font-size: 3rem;
+      }
+      .title-countdown.text-left{
+          text-align: center!important;
+      }
+      .mt-55{
+          margin-top: 0;
+      }
+      .ml-33{
+          margin-left: 0;
+      }
+  }

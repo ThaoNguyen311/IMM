@@ -47,26 +47,24 @@
           }
       }
   }
+  .font25{
+    font-size: 2.5rem;
+  }
   .font60{
-      font-size: 3rem;
+      font-size: 4rem;
       font-weight: 700;
   }
   .font35{
-      font-size: 2.5rem;
+      font-size: 3rem;
   }
   .font70{
       font-size: 7rem;
       font-weight: 700;
   }
   .btn-event--border{
-      border-radius: 30px!important;
+      border-radius: 15px!important;
   }
-  .mt-55{
-      margin-top: -55px;
-  }
-  .ml-33{
-      margin-left: -33px;
-  }
+
   @media screen and (max-width:1750px) and (min-width:1200px){
       .count-down ul{
           li {
@@ -76,6 +74,7 @@
               }
               &::before{
                   top:10px;
+                  height: 30px;
               }
               span{
                   font-size: 0.8rem;
@@ -86,14 +85,11 @@
       .font60{
           font-size: 2rem;
       }
-      .font35 {
+      .font35, .font25 {
           font-size: 1.5rem;
       }
       .font70 {
           font-size: 6rem;
-      }
-      .mt-55{
-          margin-top: -25px;
       }
       .event__btn-size{
           font-size: 1rem;
@@ -124,9 +120,6 @@
   
           }
       }
-      .mt-55{
-          margin-top: 0;
-      }
       .event__btn-size{
           font-size: 1rem;
       }
@@ -135,7 +128,7 @@
       .font60{
           font-size: 1.5rem;
       }
-      .font35 {
+      .font35, .font25 {
           font-size: 1rem;
       }
       .font70 {
@@ -156,9 +149,6 @@
   
           }
       }
-      .mt-55{
-          margin-top: 0;
-      }
       .event__btn-size{
           font-size: 1rem;
       }
@@ -177,7 +167,7 @@
               }
           }
       }
-      .font60, .font35{
+      .font60, .font35, .font25{
           font-size: 1.5rem;
       }
       .font70 {
@@ -185,11 +175,5 @@
       }
       .title-countdown.text-left{
           text-align: center!important;
-      }
-      .mt-55{
-          margin-top: 0;
-      }
-      .ml-33{
-          margin-left: 0;
       }
   }

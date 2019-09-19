@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=vietnamese');
 // primary color
 $primary-color: #ad1f23;
 $primary-color-light: #e5554c;
@@ -24,7 +25,8 @@ $btn-link-bg:$primary-color;
 
 /*font size*/
 
-@function rem($pixels, $context: 16) {
+@function rem($pixels,
+$context: 16) {
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;
     }
@@ -37,7 +39,7 @@ $btn-link-bg:$primary-color;
 
 /*font-family body*/
 
-$font-family-base: 'Noto Sans',
+$font-family-base: 'Roboto',
 sans-serif;
 $font-size-base:rem(15);
 
@@ -47,8 +49,15 @@ $font-awesome: FontAwesome;
 
 /*set screen*/
 
-$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px) !default;
-$container-max-widths: ( sm: 540px, md: 750px, lg: 980px, xl: 1170px) !default;
+$grid-breakpoints: ( xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px) !default;
+$container-max-widths: ( sm: 540px,
+md: 750px,
+lg: 980px,
+xl: 1170px) !default;
 
 /*font heading*/
 
@@ -82,7 +91,8 @@ $menu-main-bg-hover: $primary-color;
 $menu-level1-color: #ffffff;
 $menu-level1-background: $menu-main-bg-hover;
 $menu-level1-color-hover: #ffffff;
-$menu-level1-background-hover: lighten($menu-main-bg-hover, 10%);
+$menu-level1-background-hover: lighten($menu-main-bg-hover,
+10%);
 
 /*search*/
 

@@ -81,6 +81,9 @@
     @extend .title-style-01;
     color: black;
     padding-bottom: 1rem;
+    &:after {
+        width: rem(80);
+    }
 }
 
 .shadow-top {

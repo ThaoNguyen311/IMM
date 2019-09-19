@@ -1,67 +1,256 @@
 {% extends 'layouts/application.html' %} {% block bodyClass %}class="home-page"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %} {% include "modules/slidebanner.html"%}
-<section class="service space--30" id="fullservice" data-aos="fade-up">
+<section class="service space--30 d-none d-md-block" id="fullservice" data-aos="fade-up">
     <div class="container">
         <div class="row">
             {% include "modules/component/homepage-service.html" %}
         </div>
     </div>
 </section>
-<section class="America-block">
-    <div class="container">
-        <h1 class="text-center title-style-02 title-mb space--80">Các chương trình đầu tư <br> lấy Quốc tịch và Visa đi lại </h1>
-        <div class="row align-items-end row-0">
-            <div class="col-md-6">
-                <div class="row align-items-end">
-                    <div class="col-6">
-                        <div class="homepage-panel text-right">
-                            <p class="display-st mb-0">Đầu tư <br> lấy thẻ xanh</p>
-                            <p class="text-default display-rd mb-0">EB-5</p>
-                            <p class="btn-register">
-                                <a href="#register">Yêu cầu tư vấn</a>
+<section class="america-block py-4 py-md-5">
+    <h1 class="text-center title-style-02 title-mb space--80">Các chương trình đầu tư <br> lấy Quốc tịch và Visa đi lại </h1>
+    <div class="row row-0 align-items-end">
+        <div class="col-md-6">
+            <div class="row align-items-end">
+                <div class="col-6 col-md-7">
+                    <div class="homepage-panel text-right">
+                        <h1>
+                            <span class="display-st mb-0 d-block">Đầu tư <br> lấy thẻ xanh</span>
+                            <span class="text-default display-rd mb-0">EB-5</span>
+                        </h1>
+                        <div class="btn-actions">
+                            <p class="mb-0">
+                                <a class="btn-register" href="#register">Yêu cầu tư vấn</a>
+                            </p>
+                            <p>
+                                <a class="btn-more" href="#">Tìm hiểu thêm <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                             </p>
                         </div>
                     </div>
-                    <di class="col-6">
-                        <img src="../images/home-page/US-passport.png" alt="US-passport.png">
-                    </di>
+                </div>
+                <div class="col-6 col-md-5 py-5">
+                    <img class="w-90-mb" src="../images/home-page/US-passport.png" alt="US-passport.png">
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="row align-items-end">
-                    <div class="col-6">
-                        <div class="homepage-panel text-right">
-                            <p class="display-st mb-0">Lấy thêm<br> Quốc tịch</p>
-                            <p class="text-default display-nd mb-0">GRENADA</p>
-                            <p class="display-st mb-0">& VISA E-2</p>
-                            <p class="display-rd text-default">MỸ</p>
-                            <p class="btn-register">
-                                <a href="#register">Yêu cầu tư vấn</a>
+        </div>
+        <div class="col-md-6">
+            <div class="row align-items-end">
+                <div class="col-6 col-md-4 order-2 order-md-1">
+                    <div class="homepage-panel text-md-right text-left">
+                        <h1>
+                            <span class="display-st mb-0 d-block">Lấy thêm<br> Quốc tịch</span>
+                            <span class="text-default display-nd mb-0 d-block">GRENADA</span>
+                            <span class="display-st mb-0 d-block">& VISA E-2</span>
+                            <span class="display-rd text-default">MỸ</span>
+                        </h1>
+                        <div class="btn-actions">
+                            <p class="mb-0">
+                                <a class="btn-register" href="#register">Yêu cầu tư vấn</a>
+                            </p>
+                            <p>
+                                <a class="btn-more" href="#">Tìm hiểu thêm <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                             </p>
                         </div>
                     </div>
-                    <di class="col-6">
-                        <img src="../images/home-page/grenada-passport.png" alt="grenada-passport.png">
-                    </di>
+                </div>
+                <div class="col-6 col-md-6 py-5 pl-5 pl-md-3 order-md-2">
+                    <img src="../images/home-page/grenada-passport.png" alt="grenada-passport.png">
                 </div>
             </div>
         </div>
     </div>
 </section>
+<section class="australia-block">
+    <div class="container container-home">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 text-white text-right">
+                <h2 class="block-home__title mb-4 d-flex justify-content-end align-items-end">
+                    <span class="left text-right">
+                        LẤY THƯỜNG TRÚ NHÂN <br>CHO CẢ GIA ĐÌNH
+                    </span>
+                    <span class="display-title">ÚC</span>
+                </h2>
+                <h3 class="block-home__sub-title bg-light text-default py-2 px-4 d-inline">theo diện Doanh nhân & Đầu tư</h3>
+                <ul class="list-inline list-visa">
+                    <li><a href="#">188-A</a></li>
+                    <li><a href="#">188-B</a></li>
+                    <li><a href="#">188-C</a></li>
+                    <li><a href="#">132</a></li>
+                </ul>
+                <div class="btn-actions">
+                    <p class="mb-0 text-right text-md-center">
+                        <a class="btn-register--line" href="#register">Yêu cầu tư vấn</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="canada-block pt-4">
+    <div class="container container-home">
+        <div class="row align-items-md-end align-items-lg-center">
+            <div class="col-md-6 text-center">
+                <p><img src="../images/home-page/canada-flag.png" alt="canada-flag.png"></p>
+                <h2 class="mb-4">
+                    <span class="text-default display-st">Canada</span><br>
+                    <span class="display-nd">Chương trình Tỉnh bang<br> chỉ định diện Doanh nhân </span>
+                </h2>
+                <div class="btn-actions">
+                    <p class="mb-0">
+                        <a class="btn-register" href="#register">Yêu cầu tư vấn</a>
+                    </p>
+                    <p>
+                        <a class="btn-more" href="/dinh-cu-canada">Tìm hiểu thêm <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="../images/home-page/canada-banner.png" alt="canada-banner.png">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="europe-block">
+    <div class="container container-home">
+        <div class="row align-items-center">
+            <div class="col-md-4 col-lg-6">
 
+            </div>
+            <div class="col-md-8 col-lg-6 text-center">
+                <div class="white-box">
+                    <p><img src="../images/home-page/europe-flag.png" alt="europe-flag.png"></p>
+                    <h2 class="mb-4">
+                        <span class="display-st d-block" style="color:#022974">Châu Âu</span>
+                        <span class="display-nd"><b>Tự do đi lại, sinh sống, làm việc, học tập tại tất cả các quốc gia Liên minh châu Âu</b></span>
+                    </h2>
+                    <div class="btn-actions">
+                        <p class="mb-0">
+                            <a class="btn-register" href="#register">Yêu cầu tư vấn</a>
+                        </p>
+                        <p class="mb-0">
+                            <a class="btn-more" href="/quoc-tich-thuong-tru-nhan-chau-au">Tìm hiểu thêm <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slide-nation py-4">
+    <div class="container container-home" data-module="slider">
+        <div class="slide-nation">
+            <div class="item d-flex align-items-center">
+                <a href="/dinh-cu-hy-lap" title="Định cư Hy Lạp">
+                    <div class="d-flex align-items-center">
+                        <div class="flag">
+                            <img src="../images/home-page/hylap.png" alt="hylap.png">
+                        </div>
+                        <div class="nation-name">
+                            Hy Lạp
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item d-flex align-items-center">
+                <a href="/dinh-cu-ireland" title="Định cư IreLand">
+                    <div class="d-flex align-items-center">
+                        <div class="flag">
+                            <img src="../images/home-page/ireland-flag.png" alt="ireland-flag.png">
+                        </div>
+                        <div class="nation-name">
+                            Ireland
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item d-flex align-items-center">
+                <a href="#" title="Định cư đảo Síp">
+                    <div class="d-flex align-items-center">
+                        <div class="flag">
+                            <img src="../images/home-page/cyprus-flag.png" alt="cyprus-flag.png">
+                        </div>
+                        <div class="nation-name">
+                            Cyprus
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item d-flex align-items-center">
+                <a href="/dinh-cu-bo-dao-nha" title="Định cư Bồ Đào Nha">
+                    <div class="d-flex align-items-center">
+                        <div class="flag">
+                            <img src="../images/home-page/bo-dao-nha.png" alt="bo-dao-nha.png">
+                        </div>
+                        <div class="nation-name">
+                            Bồ Đào Nha
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item d-flex align-items-center">
+                <a href="/dinh-cu-montenegro" title="Định cư Montenegro">
+                    <div class="d-flex align-items-center">
+                        <div class="flag">
+                            <img src="../images/home-page/montenegro-flag.png" alt="montenegro-flag.png">
+                        </div>
+                        <div class="nation-name">
+                            Montenegro
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item d-flex align-items-center">
+                <a href="/dinh-cu-bulgaria" title="Định cư Bulgaria">
+                    <div class="d-flex align-items-center">
+                        <div class="flag">
+                            <img src="../images/home-page/bulgaria-flag.png" alt="bulgaria-flag.png">
+                        </div>
+                        <div class="nation-name">
+                            Bulgaria
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="grenada-block mb-4 mb-md-5">
+    <div class="container container-home">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <div class="white-box">
+                    <h2 class="mb-4">
+                        <span class="display-st" style="color:#000000">Grenada</span>
+                    </h2>
+                    <p class="display-nd">Cùng cả gia đình tự do đi lại và mở rộng cơ hội kinh doanh</p>
+                    <div class="btn-actions">
+                        <p class="mb-0">
+                            <a class="btn-register" href="#register">Yêu cầu tư vấn</a>
+                        </p>
+                        <p class="mb-0">
+                            <a class="btn-more" href="/dinh-cu-grenada">Tìm hiểu thêm <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
 
+            </div>
+        </div>
+    </div>
+</section>
 <section class="blog space--60" data-aos="fade-up">
     <div class="container">
         <div class="blog__title">
-            <h1 class="text-center main-title">Tin tức</h1>
+            <h2 class="text-center title-style-02 title-mb h1"><b>Tin tức</b></h2>
         </div>
         <div class="blog-panel">
-            <div class="row">
-                {% include "modules/component/block-news.html" %}
-            </div>
+
+            {% include "modules/component/block-news.html" %}
+
         </div>
     </div>
 </section>
-
 <section class=" d-block  d-sm-none d-md-none d-lg-none d-xl-none">
     <div class="container">
         <div class="row text-center">

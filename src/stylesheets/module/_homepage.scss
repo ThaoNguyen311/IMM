@@ -1,36 +1,66 @@
-.EU-intro {
-    &__title {
-        font-size: rem(20);
+// .EU-intro {
+//     &__title {
+//         font-size: rem(20);
+//     }
+//     .find-nation {
+//         position: relative;
+//         &:before {
+//             content: "";
+//             background-color: red;
+//             border-radius: 50%;
+//             position: absolute;
+//             top: rem(-25);
+//             left: rem(29);
+//             width: rem(25);
+//             height: rem(25);
+//             z-index: 1;
+//             animation: ripple 2s linear infinite;
+//             transform: translate(-50%, -50%);
+//         }
+//         img {
+//             z-index: 2;
+//             position: relative;
+//         }
+//     }
+// }
+// @include media-breakpoint-up(md) {
+//     .video-section,
+//     .EU-video {
+//         .container {
+//             width: 100%;
+//             padding: 0;
+//             max-width: 100%;
+//         }
+//     }
+// }
+//---------------------------
+//New homepage
+.homepage-panel {
+    font-family: "utm-alexander", sans-serif;
+    line-height: 1.35;
+    .display-st {
+        font-size: 2vw;
+        color: black;
     }
-    .find-nation {
-        position: relative;
-        &:before {
-            content: "";
-            background-color: red;
-            border-radius: 50%;
-            position: absolute;
-            top: rem(-25);
-            left: rem(29);
-            width: rem(25);
-            height: rem(25);
-            z-index: 1;
-            animation: ripple 2s linear infinite;
-            transform: translate(-50%, -50%);
-        }
-        img {
-            z-index: 2;
-            position: relative;
-        }
+    .display-nd {
+        font-size: 3vw;
     }
-}
-
-@include media-breakpoint-up(md) {
-    .video-section,
-    .EU-video {
-        .container {
-            width: 100%;
-            padding: 0;
-            max-width: 100%;
+    .display-rd {
+        font-size: 5vw;
+    }
+    .btn-register {
+        a {
+            display: inline-block;
+            @include btnSubmit($primary-color, 2rem, normal);
+            @include display-style(white, $primary-color);
+            font-family: "Roboto", sans-serif;
+            padding: .7rem 2rem;
+            font-size: 1rem;
+            border: 2px solid;
+            font-weight: bold;
+            &:hover {
+                @include display-style($primary-color, white);
+            }
         }
     }
 }

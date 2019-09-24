@@ -122,3 +122,19 @@
     border-radius: $radius;
     font-style: $font-style;
 }
+
+@mixin resetTab() {
+    .nav-tabs {
+        border-bottom: 0;
+    }
+    .nav-link {
+        border: 0;
+        &.active {
+            border: 0;
+            background: transparent;
+        }
+        @include hover-focus-active {
+            border: 0
+        }
+    }
+}

@@ -1,40 +1,5 @@
-// .EU-intro {
-//     &__title {
-//         font-size: rem(20);
-//     }
-//     .find-nation {
-//         position: relative;
-//         &:before {
-//             content: "";
-//             background-color: red;
-//             border-radius: 50%;
-//             position: absolute;
-//             top: rem(-25);
-//             left: rem(29);
-//             width: rem(25);
-//             height: rem(25);
-//             z-index: 1;
-//             animation: ripple 2s linear infinite;
-//             transform: translate(-50%, -50%);
-//         }
-//         img {
-//             z-index: 2;
-//             position: relative;
-//         }
-//     }
-// }
-// @include media-breakpoint-up(md) {
-//     .video-section,
-//     .EU-video {
-//         .container {
-//             width: 100%;
-//             padding: 0;
-//             max-width: 100%;
-//         }
-//     }
-// }
-//---------------------------
 //New homepage
+.home,
 .home-page {
     @media screen and (min-width: 1600px) {
         section > .container-home {
@@ -65,8 +30,23 @@
     }
     &-more {
         font-family: "Roboto", sans-serif;
+        position: relative;
+        &:after {
+            content: "";
+            width: 0;
+            height: 2px;
+            bottom: 8px;
+            left: 0;
+            right: 0;
+            background-color: $primary-color;
+            transition: all 0.4s ease-in-out;
+            position: absolute;
+            margin: auto;
+        }
         @include hover-focus-active {
-            // letter-spacing: 1px;
+            &:after {
+                width: 2.5rem
+            }
         }
     }
 }
@@ -82,6 +62,14 @@
         .title-style-02 {
             font-size: rem(45);
             font-size: 2.33vw;
+        }
+    }
+    .black-hover-effect:hover {
+        .display-st,
+        .display-nd,
+        .btn-more,
+        .text-default {
+            color: white !important;
         }
     }
 }
@@ -133,6 +121,7 @@
         &__sub-title {
             font-size: 43px;
             font-size: 2.24vw;
+            white-space: nowrap;
         }
     }
     .list-visa {
@@ -146,6 +135,8 @@
             position: relative;
             padding-left: 1rem;
             white-space: nowrap;
+            display: inline-block;
+            @include transition();
             &:after {
                 content: "";
                 width: 10px;
@@ -154,11 +145,10 @@
                 position: absolute;
                 left: 0;
                 top: 48%;
-                @include transition();
                 @include transform(rotate(45deg))
             }
-            &:hover:after {
-                @include transform(rotate(0))
+            &:hover {
+                text-shadow: 3px 3px $primary-color;
             }
         }
         li {
@@ -195,7 +185,8 @@
     background: rgba(white, 0.8);
     padding: 2.5rem;
     h2 {
-        font-weight: normal
+        font-weight: normal;
+        line-height: 1;
     }
     .display-st {
         font-size: 125px;
@@ -300,6 +291,9 @@
             font-size: rem(20)
         }
     }
+    .space--80 {
+        margin-bottom: 0 !important;
+    }
 }
 
 @include media-breakpoint-down(md) {
@@ -334,6 +328,8 @@
         max-width: rem(180);
     }
     .australia-block {
+        padding: 2rem 0;
+        background-attachment: unset;
         .block-home__title .left {
             font-size: rem(25)
         }
@@ -353,11 +349,21 @@
         }
     }
     .white-box {
+        padding: 2rem 0;
         .display-st {
             font-size: 3rem;
         }
         h2 {
             line-height: 1;
+        }
+    }
+    .slide-nation {
+        .nation-name {
+            font-size: 1rem;
+        }
+        .flag {
+            max-width: 3rem;
+            min-width: 3rem;
         }
     }
 }
@@ -396,5 +402,8 @@
     .grenada-block,
     .europe-block {
         padding: 1rem 0
+    }
+    .slide-nation {
+        padding: 0;
     }
 }

@@ -1,0 +1,118 @@
+.entrance-page {
+    padding: 10rem 0;
+    .container {
+        position: relative;
+        .or-text {
+            span {
+                font-size: 27px;
+                text-transform: uppercase;
+                color: #ff0000;
+                display: inline-block;
+                font-weight: bold;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            .center-text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                width: 100%;
+                span {
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+    .head {
+        padding: 10px;
+        color: white;
+        &.greek {
+            background: url('../images/entrance/bg-hy-lap.jpg') 0 0/cover repeat-x;
+        }
+        &.sip {
+            background: url('../images/entrance/bg-sip.jpg') 0 0/cover repeat-x;
+        }
+    }
+    .btn-to-link {
+        display: inline-block;
+        border-radius: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1rem;
+        padding: 7px 20px;
+        &.greek {
+            background: #b8775d;
+            background-image: linear-gradient(to right, #b8775d, #f7b89e, #bb7a60);
+            &:hover {
+                background-image: linear-gradient(90deg, #f7b89e 0%, #b8775d 50%, #f7b89e 100%);
+            }
+        }
+        &.sip {
+            background: rgba(223, 170, 80, 1);
+            background: linear-gradient(90deg, rgba(232, 222, 132, 1) 0%, rgba(245, 242, 143, 1) 25%, rgba(236, 207, 116, 1) 50%, rgba(231, 189, 102, 1) 75%, rgba(223, 170, 80, 1) 100%);
+            &:hover {
+                background: linear-gradient(-90deg, rgba(232, 222, 132, 1) 0%, rgba(245, 242, 143, 1) 25%, rgba(236, 207, 116, 1) 50%, rgba(231, 189, 102, 1) 75%, rgba(223, 170, 80, 1) 100%);
+            }
+        }
+        &:hover {
+            color: #000;
+        }
+    }
+    .selling-point {
+        border: 3px solid;
+        border-bottom: 0;
+        .text-gradient {
+            font-weight: 900;
+        }
+        &.greek {
+            border-color: #C98C71;
+            .text-gradient {
+                background: linear-gradient(to right, #b8775d, #f7b89e, #bb7a60);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        &.sip {
+            border-color: #BD8D44;
+            .text-gradient {
+                background: linear-gradient(90deg, rgba(236, 207, 116, .5) 0, rgba(231, 189, 102, 1) 50%, rgba(223, 170, 80, 1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        ul {
+            list-style: none;
+            li {
+                position: relative;
+                margin-bottom: 10px;
+                font-family: 'Times New Roman', Times, serif;
+                &::before {
+                    content: "";
+                    width: 23px;
+                    height: 23px;
+                    position: absolute;
+                    top: 0;
+                    left: -25px
+                }
+            }
+            &.greek {
+                li:before {
+                    background: url('../images/entrance/star-icon.png') 0 0/auto no-repeat;
+                }
+            }
+            &.sip {
+                li {
+                    font-weight: bold;
+                    color: #0B385B;
+                    &:before {
+                        background: url('../images/entrance/diamond-icon.png') 0 0/auto no-repeat;
+                        top: 3px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:767px) {
+        padding: 1.5rem 0
+    }
+}

@@ -1,5 +1,5 @@
 .DS_Store
-.publish
+publish
 .idea
 yarn.lock
 gulpfile.js/config.local.js
@@ -8,3 +8,4 @@ Desktop.ini
 node_modules
 **/generated/_icons.sass
 npm-debug.log
+public

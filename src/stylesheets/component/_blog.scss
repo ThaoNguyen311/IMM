@@ -21,7 +21,7 @@
     }
     &__flag {
         padding-bottom: 3px;
-        border-bottom: 1px solid #dddddd;
+        border-bottom: 1px solid #ddd;
         margin-top: .5rem;
     }
     &__des {
@@ -45,9 +45,9 @@
     .btn__more-view {
         display: inline-block;
         padding: .2rem 1rem;
-        @include display-style(#ffffff, #000000);
+        @include display-style(#fff, #000);
         &:hover {
-            @include display-style(#ffffff, $primary-color);
+            @include display-style(#fff, $primary-color);
         }
     }
 }

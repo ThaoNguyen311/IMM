@@ -105,7 +105,10 @@
         jsPath: 'javascripts/'
     };
 
-    $script(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'], 'vendor', function() {
+    $script(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js',
+        'https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js'
+    ], 'vendor', function() {
         $script(['js/aos.js', 'js/slicknav.js', 'javascripts/app.js'],
             'myScript',
             function() {
@@ -123,9 +126,6 @@
 
            
     });
-
-
-
     $script.ready('myScript', function() {
         function autoResize(){
                 var heightifame = $('#iframeregister #stepForm').height();

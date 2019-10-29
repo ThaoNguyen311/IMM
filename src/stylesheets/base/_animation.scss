@@ -83,3 +83,99 @@
         }
     }
 }
+
+
+/* fill background */
+
+@-webkit-keyframes fill {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@-moz-keyframes fill {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes fill {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+
+/* jump social icons */
+
+@-webkit-keyframes iconjump {
+    0% {
+        top: 14px;
+    }
+    10% {
+        top: 30px;
+    }
+    20% {
+        top: 14px;
+    }
+    50% {
+        top: 14px;
+    }
+    90% {
+        top: 14px;
+    }
+    100% {
+        top: 14px;
+    }
+}
+
+@-moz-keyframes iconjump {
+    0% {
+        top: 14px;
+    }
+    10% {
+        top: 30px;
+    }
+    20% {
+        top: 14px;
+    }
+    50% {
+        top: 14px;
+    }
+    90% {
+        top: 14px;
+    }
+    100% {
+        top: 14px;
+    }
+}
+
+@keyframes iconjump {
+    0% {
+        top: 14px;
+    }
+    10% {
+        top: 30px;
+    }
+    20% {
+        top: 14px;
+    }
+    50% {
+        top: 14px;
+    }
+    90% {
+        top: 14px;
+    }
+    100% {
+        top: 14px;
+    }
+}

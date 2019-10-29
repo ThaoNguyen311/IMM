@@ -1,0 +1,213 @@
+{% extends 'layouts/application.html' %} {% block bodyClass %}class="home-page"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %}
+<form class="stepform" id="stepForm" data-module="stepForm">
+    <div class="row">
+        <div class="col-md-3">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">Thông tin cá nhân</li>
+                <li>Thông tin công ty</li>
+                <li>Kinh nghiệm quản lý</li>
+                <li>Kiến thức</li>
+                <li>Kế hoạch gia đình</li>
+            </ul>
+        </div>
+        <div class="col-md-9 scrollTo">
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="stepform__title text-uppercase mb-4">Thông tin cá nhân</h2>
+                <div class="form-group">
+                    <label class="mb-1">Họ và tên</label>
+                    <input class="form-control required" name="name" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Email</label>
+                    <input class="form-control required" name="email" type="email" />
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Số điện thoại</label>
+                    <input class="form-control required" name="phone" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Giới tính</label>
+                    <select class="form-control">
+                        <option value="male">Nam</option>
+                        <option value="female">Nữ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Tuổi</label>
+                    <input class="form-control required" name="age" type="text" name="your-age" />
+                </div>
+                <input type="button" name="next" class="next action-button" value="Kế tiếp" />
+            </fieldset>
+            <fieldset>
+                <h2 class="stepform__title text-uppercase">Thông tin công ty</h2>
+                <h3 class="stepform__subtitle">Thông tin công ty đang quản lý ở Việt Nam</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="mb-1">Tên công ty</label>
+                            <input class="form-control required" name="company" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-1">Năm thành lập</label>
+                            <input class="form-control required" name="year" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-1">Lĩnh vực kinh doanh</label>
+                            <input class="form-control required" name="linhvuc" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-1">Vốn đăng ký</label>
+                            <input class="form-control required" name="vondangky" type="text" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="mb-1">Doanh số năm gần nhất</label>
+                            <input class="form-control required" name="doanhso" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-1">Lợi nhuận</label>
+                            <input class="form-control required" name="loinhuan" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-1">Số nhân viên</label>
+                            <input class="form-control required" name="nhanvien" type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group text-left">
+                    <label class="mb-3">Có sở hữu cổ phần trong công ty?</label>
+                    <label class="check-content">
+                        Không
+                        <input class="shareCompany" type="radio" name="shareCompany" value="no" checked="checked" >
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">
+                        Có
+                        <input class="shareCompany" type="radio" name="shareCompany" value="yes">
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <div class="form-group d-none sub-drop" id="show1">
+                        <input class="form-control" type="text" placeholder="Số (%) cổ phần" />
+                    </div>
+                </div>
+                <input type="button" name="previous" class="previous action-button" value="Quay lại" />
+                <input type="button" name="next" class="next action-button" value="Kế tiếp" />
+            </fieldset>
+            <fieldset>
+                <h2 class="stepform__title text-uppercase">Kinh nghiệm quản lý</h2>
+                <h3 class="stepform__subtitle">Thông tin kinh nghiệm quản lý cấp cao</h3>
+                <div class="form-group">
+                    <label class="mb-1">Chức vụ trong công ty trong 3 năm qua</label>
+                    <input class="form-control required" name="chucvu" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Đang quản lý bao nhiêu nhân viên ?</label>
+                    <input class="form-control required" name="sonhanvienquanly" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Bằng cấp cao nhất đạt được</label>
+                    <input class="form-control required" name="bangcap" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Khả năng giao tiếp tiếng Anh</label>
+                    <select class="form-control">
+                        <option>Không biết</option>
+                        <option>Cơ bản</option>
+                        <option>Trung bình</option>
+                        <option>Tốt</option>
+                    </select>
+                </div>
+                <input type="button" name="previous" class="previous action-button" value="Quay lại" />
+                <input type="button" name="next" class="next action-button" value="Kế tiếp" />
+            </fieldset>
+            <fieldset>
+                <h2 class="stepform__title text-uppercase">Kiến thức</h2>
+                <h3 class="stepform__subtitle">Kiến thức và am hiểu về nước Mỹ</h3>
+                <div class="form-group">
+                    <label class="mb-1">Đã từng qua Mỹ bao nhiêu lần</label>
+                    <input class="form-control required" name="solandimy" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Kiến thức chung về nước Mỹ và vận hành kinh doanh ở Mỹ</label>
+                    <select class="form-control">
+                        <option>Chưa biết</option>
+                        <option>Sơ sơ</option>
+                        <option>Biết rất nhiều</option>
+                        <option>Rất am hiểu thị trường Mỹ</option>
+                    </select>
+                </div>
+                <input type="button" name="previous" class="previous action-button" value="Quay lại" />
+                <input type="button" name="next" class="next action-button" value="Kế tiếp" />
+            </fieldset>
+            <fieldset>
+                <h2 class="stepform__title text-uppercase mb-4">Kế hoạch gia đình</h2>
+                <div class="form-group text-left">
+                    <label class="mb-3">Có sẵn sàng ỡ Mỹ dài hạn để quản lý doanh nghiệp?</label>
+                    <label class="check-content">Không
+                        <input type="radio" name="haveReady" value="no" checked="checked" >
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">Có
+                        <input type="radio" name="haveReady" value="yes">
+                        <span class="checkmark radio"></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Dự định ở thành phố nào?</label>
+                    <input class="form-control required" name="thanhphodudinh" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Tuổi các con</label>
+                    <input class="form-control required" name="tuoicon" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Khi nào có thể sang Mỹ để quản lý doanh nghiệp?</label>
+                    <input class="form-control required" name="thoigianquamy" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">Tổng số tiền mặt có thể đầu tư sang Mỹ lúc này</label>
+                    <input class="form-control required" name="tienmatdautu" type="text" />
+                </div>
+                <div class="form-group text-left">
+                    <label class="mb-3">Có người thân ở Mỹ hay không?</label>
+                    <label class="check-content">Không
+                        <input class="have-related" type="radio" name="haveRelated" value="no" checked="checked" >
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">Có
+                        <input class="have-related" type="radio" name="haveRelated" value="yes">
+                        <span class="checkmark radio"></span>
+                    </label>
+                </div>
+                <div class="form-group text-left sub-drop pl-4 d-none border-left-2 ml-1" id="show2">
+                    <label class="mb-3">Đã nộp hồ sơ bảo lãnh hay chưa?</label>
+                    <label class="check-content">Chưa nộp
+                        <input type="radio" name="haveApply" value="no" checked="checked" >
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">Đã nộp
+                        <input type="radio" name="haveApply" value="yes">
+                        <span class="checkmark radio"></span>
+                    </label>
+                </div>
+                <div class="form-group text-left">
+                    <label class="mb-3">Trước đây đã từng nộp hồ sơ xin visa định cư Mỹ hay chưa?</label>
+                    <label class="check-content">Chưa nộp
+                        <input type="radio" name="haveApplyVisa" value="no" checked="checked" >
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">Đã nộp
+                        <input type="radio" name="haveApplyVisa" value="yes">
+                        <span class="checkmark radio"></span>
+                    </label>
+                </div>
+                <input type="button" name="previous" class="previous action-button" value="Quay lại" />
+                <input type="submit" name="submit" class="submit action-button" value="Submit" />
+            </fieldset>
+        </div>
+    </div>
+</form>
+{% endblock %}

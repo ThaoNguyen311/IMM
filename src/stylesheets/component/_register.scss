@@ -16,7 +16,7 @@ $input-border-color:#989898;
             padding: $input-btn-padding-y $input-btn-padding-x;
             border-radius: 0;
             font-size: rem(14);
-            height: auto;
+            min-height: rem(40);
             @include placeholder($input-color);
             @include transition();
             @include hover-focus-active {
@@ -76,7 +76,7 @@ $input-border-color:#989898;
         background: rgba(0, 0, 0, 0.8);
     }
     &__light {
-        background-color: #ffffff;
+        background-color: #fff;
         opacity: 0.3;
     }
 }

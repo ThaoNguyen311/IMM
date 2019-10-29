@@ -66,7 +66,7 @@ blockquote {
         left: 0;
         height: rem(25);
         width: rem(25);
-        background-color: #eeeeee;
+        background-color: #eee;
         @include transition();
         &:after {
             content: "";

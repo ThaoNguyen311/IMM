@@ -40,7 +40,7 @@
         .condition {
             &__item {
                 border-radius: 0 rem(30);
-                background-color: #ffffff;
+                background-color: #fff;
                 @include css3-prefix('box-shadow',
                 '7px 16px 29px -12px rgba(0,0,0,.75)');
                 padding: rem(50);
@@ -288,7 +288,7 @@
             }
             &__item {
                 flex-basis: 33.33%;
-                background-color: #ffffff;
+                background-color: #fff;
             }
             &__content {
                 display: flex;

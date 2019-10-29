@@ -1,0 +1,140 @@
+/*form styles*/
+
+.stepform {
+    width: 90%;
+    max-width: 60rem;
+    margin: 20vh auto;
+    text-align: center;
+    position: relative;
+    fieldset {
+        background: white;
+        border-radius: 3px;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+        padding: 4rem 2rem;
+        position: relative;
+        width: 80%;
+        max-width: rem(750);
+        margin: 0 auto;
+        &:not(:first-of-type) {
+            display: none;
+        }
+        .form-control {
+            @include transition();
+            height: rem(40);
+            padding: 0 1.25rem;
+            &:hover,
+            &:active,
+            &:focus {
+                border-color: $primary-color;
+            }
+        }
+        .form-group {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            label.error {
+                order: 3
+            }
+        }
+    }
+    .action-button {
+        background: $primary-color;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 1px;
+        cursor: pointer;
+        line-height: 1;
+        padding: .7rem 2rem;
+    }
+    &__title {
+        font-weight: normal;
+    }
+    &__subtitle {
+        font-weight: normal;
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 20px;
+    }
+    .sub-drop {
+        display: none;
+    }
+    .check-content {
+        font-weight: normal;
+    }
+    label.error {
+        border: 0 !important;
+        color: red;
+        font-weight: normal;
+    }
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+    padding: 0;
+    height: 40rem;
+    li {
+        list-style-type: none;
+        float: left;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: calc(100%/5);
+        &:before {
+            content: counter(step);
+            counter-increment: step;
+            width: 1.7rem;
+            line-height: 1.7rem;
+            display: block;
+            color: #333;
+            background: #ddd;
+            border-radius: 3px;
+            margin: 0 auto .7rem auto;
+            position: absolute;
+            left: 0;
+            text-align: center;
+        }
+        &:after {
+            content: '';
+            height: 100%;
+            width: 2px;
+            background: #ddd;
+            position: absolute;
+            left: 12px;
+            top: .8rem;
+            z-index: -1;
+        }
+        &:last-child:after {
+            display: none;
+        }
+        &.active {
+            &:before,
+            &:after {
+                background-color: $primary-color;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .stepform {
+        margin: 3rem auto;
+        fieldset {
+            width: 100%;
+            padding: 1rem;
+        }
+        &__title {
+            font-size: 1.5rem;
+        }
+    }
+    #progressbar {
+        height: 15rem;
+        text-align: left;
+        li {
+            padding-left: 2.3rem
+        }
+    }
+}

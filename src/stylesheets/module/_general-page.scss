@@ -2,7 +2,7 @@
     &__tab .menu {
         list-style: none;
         padding: 0;
-        background: #CCCCCC;
+        background: #ccc;
         display: flex;
         margin-bottom: 2rem;
         li {
@@ -148,7 +148,7 @@
 }
 
 .sidebar-news__item {
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #ccc;
     .title-thumb-news h5 {
         font-size: rem(14)
     }
@@ -206,7 +206,7 @@
                     margin: 0;
                     padding: rem(5) rem(10);
                     text-transform: uppercase;
-                    display:inline-block;
+                    display: inline-block;
                 }
             }
         }

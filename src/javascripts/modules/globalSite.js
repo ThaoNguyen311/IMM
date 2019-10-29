@@ -51,5 +51,10 @@ class globalSite {
         setMaxheight($('.blog__name'));
         setMaxheight($('.benifit__title'));
     }
+
+
+    
+
+    
 }
 export default globalSite;

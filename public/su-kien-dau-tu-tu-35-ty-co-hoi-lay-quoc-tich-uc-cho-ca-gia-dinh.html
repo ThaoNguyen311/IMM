@@ -10,7 +10,9 @@
     <meta name="format-detection" content="telephone=no">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap&subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/app.css">
-    <link rel="stylesheet" media="print" href="stylesheets/print.css"> 
+    <link rel="stylesheet" media="print" href="stylesheets/print.css">
+    
+
 </head>
 
 <body class="home-page">
@@ -510,27 +512,24 @@
                     once: true,
                 });
                 $('#menu').slicknav();
-
-                
-                
-
             });
-            
-
-           
     });
     $script.ready('myScript', function() {
-        function autoResize(){
-                var heightifame = $('#iframeregister #stepForm').height();
-                $('.iframe-container').height(heightifame);
-               
-                var height = jQuery("#iframeregister").height();
-                console.log(height);
-            }
-            autoResize();
-
+        $('.getutm').click(function(){
+            var loc = 'https://crm.imm.group/surveys/l1a-form.aspx?utmlink=' + window.location.href;	 
+            //var textb = document.getElementById('txt_Name');  
+           /* var iframe = document.getElementById('iframeregister');
+            var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+            var input = innerDoc.getElementById('txt_Name');
+            input.text("425");*/
+            $('iframe[name=RSIFrame]').contents().find('#txt_Name').val("ádasd");
+            console.log($('iframe[name=RSIFrame]').contents().find('#txt_Name').val("ádasd"));
+        });
+        
+           
     });
-</script> 
+</script>
+ 
         <div class="d-sm-none py-3 py-md-4 fixed-bottom bg-dark">
             <p class="d-xl-block mb-0 text-center">
                 <a href="#register" class="d-inline">

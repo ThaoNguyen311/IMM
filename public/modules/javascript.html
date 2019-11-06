@@ -117,24 +117,20 @@
                     once: true,
                 });
                 $('#menu').slicknav();
-
-                
-                
-
             });
-            
-
-           
     });
     $script.ready('myScript', function() {
-        function autoResize(){
-                var heightifame = $('#iframeregister #stepForm').height();
-                $('.iframe-container').height(heightifame);
-               
-                var height = jQuery("#iframeregister").height();
-                console.log(height);
-            }
-            autoResize();
-
+        $('.getutm').click(function(){
+            var loc = 'https://crm.imm.group/surveys/l1a-form.aspx?utmlink=' + window.location.href;	 
+            //var textb = document.getElementById('txt_Name');  
+           /* var iframe = document.getElementById('iframeregister');
+            var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+            var input = innerDoc.getElementById('txt_Name');
+            input.text("425");*/
+            $('iframe[name=RSIFrame]').contents().find('#txt_Name').val("ádasd");
+            console.log($('iframe[name=RSIFrame]').contents().find('#txt_Name').val("ádasd"));
+        });
+        
+           
     });
 </script>

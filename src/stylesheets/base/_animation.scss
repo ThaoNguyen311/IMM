@@ -63,6 +63,15 @@
     }
 }
 
+.scale-effect {
+    img {
+        @include transition();
+    }
+    &:hover img {
+        @include transform(scale(1.2));
+    }
+}
+
 .black-hover-effect {
     position: relative;
     overflow: hidden;

@@ -117,24 +117,18 @@
                     once: true,
                 });
                 $('#menu').slicknav();
-
-                
-                
-
             });
-            
 
-           
+
+
     });
     $script.ready('myScript', function() {
-        function autoResize(){
-                var heightifame = $('#iframeregister #stepForm').height();
-                $('.iframe-container').height(heightifame);
-               
-                var height = jQuery("#iframeregister").height();
-                console.log(height);
-            }
-            autoResize();
+        function autoResize() {
+            var mydiv = $('iframe#iframeregister').contents().find('body');
+            var h = mydiv.height();
+            console.log(h);
+        }
+        autoResize();
 
     });
 </script>
